@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/frontend.php';
 require __DIR__.'/backend.php';
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
