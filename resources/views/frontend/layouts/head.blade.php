@@ -1,0 +1,35 @@
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/meanmenu.css')}}">
+    <!-- Remixicon CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/remixicon.css')}}">
+    <!-- Odometer CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/odometer.min.css')}}">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.min.css')}}">
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
+    <!-- Carousel Default CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/magnific-popup.min.css')}}">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/fancybox.min.css')}}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+    <!-- Dark CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/dark.css')}}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+
+    <title>Plod - Technology & IT Startups HTML Template</title>
+
+    <link rel="icon" type="image/png" href="{{asset('frontend/assets/images/favicon.png')}}">
+
