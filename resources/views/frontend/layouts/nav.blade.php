@@ -24,11 +24,11 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        Home
+                                    <a href="{{route('acceuil')}}" class="nav-link active">
+                                        Acceuil
                                         <i class="ri-add-line"></i>
                                     </a>
-
+{{-- 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="index.html" class="nav-link active">Home Demo - 1</a>
@@ -49,16 +49,16 @@
                                         <li class="nav-item">
                                             <a href="index-5.html" class="nav-link">Home Demo - 5</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        About
+                                    <a href="{{route('apropos')}}" class="nav-link">
+                                        A Propos
                                         <i class="ri-add-line"></i>
                                     </a>
 
-                                    <ul class="dropdown-menu">
+                                    {{-- <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="about-1.html" class="nav-link">About One</a>
                                         </li>
@@ -78,16 +78,16 @@
                                         <li class="nav-item">
                                             <a href="testimonials.html" class="nav-link">Testimonials</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{route('service')}}" class="nav-link">
                                         Services
                                         <i class="ri-add-line"></i>
                                     </a>
 
-                                    <ul class="dropdown-menu">
+                                    {{-- <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="services-1.html" class="nav-link">Services One</a>
                                         </li>
@@ -103,7 +103,7 @@
                                         <li class="nav-item">
                                             <a href="services-details.html" class="nav-link">Services Details</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
 
                                 <li class="nav-item">
@@ -223,12 +223,12 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Case Study
+                                    <a href="{{route('cas')}}" class="nav-link">
+                                        Realisation
                                         <i class="ri-add-line"></i>
                                     </a>
 
-                                    <ul class="dropdown-menu">
+                                    {{-- <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="case-study-1.html" class="nav-link">Case Study One</a>
                                         </li>
@@ -240,16 +240,16 @@
                                         <li class="nav-item">
                                             <a href="case-study-details.html" class="nav-link">Case Study Details</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{route('blog')}}" class="nav-link">
                                         Blog
                                         <i class="ri-add-line"></i>
                                     </a>
 
-                                    <ul class="dropdown-menu">
+                                    {{-- <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="blog.html" class="nav-link">Blog</a>
                                         </li>
@@ -265,11 +265,11 @@
                                         <li class="nav-item">
                                             <a href="blog-details.html" class="nav-link">Blog Details</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact</a>
+                                    <a href="{{route('contact')}}" class="nav-link">Contact</a>
                                 </li>
                             </ul>
 

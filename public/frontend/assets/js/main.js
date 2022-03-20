@@ -1,9 +1,9 @@
 jQuery(function ($) {
     'use strict';
-
+	
 	// Header Sticky
 	$(window).on('scroll',function() {
-		if ($(this).scrollTop() > 350){
+		if ($(this).scrollTop() > 350){  
 			$('.navbar-area').addClass("is-sticky");
 		}
 		else{
@@ -15,7 +15,7 @@ jQuery(function ($) {
 	jQuery('.mean-menu').meanmenu({
 		meanScreenWidth: "1199"
 	});
-
+	
 	// Others Option For Responsive JS
 	$(".others-option-for-responsive .dot-menu").on("click", function(){
 		$(".others-option-for-responsive .container .container").toggleClass("active");
@@ -37,7 +37,7 @@ jQuery(function ($) {
 		$('.search-overlay').fadeIn();
 		$('.close-btn').addClass('active');
 	});
-
+	
 	// Button Hover JS
 	$('.default-btn')
 	.on('mouseenter', function(e) {
@@ -353,7 +353,7 @@ jQuery(function ($) {
 			TweenMax.to($(this), 1, {x: (1 - newx*speed), y: (1 - newy*speed)});
 		});
 	});
-
+	
 	// Partner Slides
 	$('.partner-slides').owlCarousel({
 		loop: true,
@@ -392,7 +392,7 @@ jQuery(function ($) {
 		margin: 30,
 		autoplayHoverPause: true,
 		autoplay: true,
-
+		
 		responsive: {
 			0: {
 				items: 1
@@ -416,7 +416,7 @@ jQuery(function ($) {
 		margin: 30,
 		autoplayHoverPause: true,
 		autoplay: true,
-
+		
 		responsive: {
 			0: {
 				items: 1
@@ -443,7 +443,7 @@ jQuery(function ($) {
 		margin: 30,
 		autoplayHoverPause: true,
 		autoplay: true,
-
+		
 		responsive: {
 			0: {
 				items: 1
@@ -456,7 +456,7 @@ jQuery(function ($) {
 			}
 		}
 	});
-
+	
 	// Pricing Switcher
 	let el = document.getElementById('filt-monthly');
 	if(el){
@@ -486,13 +486,13 @@ jQuery(function ($) {
 			y.classList.toggle("hide");
 		});
 	}
-
+	
 	// Subscribe form
 	$(".newsletter-form").validator().on("submit", function (event) {
 		if (event.isDefaultPrevented()) {
 			formErrorSub();
 			submitMSGSub(false, "Please enter your email correctly.");
-		}
+		} 
 		else {
 			event.preventDefault();
 		}
@@ -521,7 +521,7 @@ jQuery(function ($) {
 	function submitMSGSub(valid, msg){
 		if(valid){
 			var msgClasses = "validation-success";
-		}
+		} 
 		else {
 			var msgClasses = "validation-danger";
 		}
@@ -538,7 +538,7 @@ jQuery(function ($) {
 		$(this).toggleClass('active');
 		$(this).next().slideToggle('fast');
 		$('.accordion-content').not($(this).next()).slideUp('fast');
-		$('.accordion-title').not($(this)).removeClass('active');
+		$('.accordion-title').not($(this)).removeClass('active');		
 	});
 
 	// Odometer JS
@@ -563,14 +563,14 @@ jQuery(function ($) {
 	// Nice Select JS
 	$('select').niceSelect();
 
-	// Count Time
+	// Count Time 
 	function makeTimer() {
-		var endTime = new Date("December 30, 2028 17:00:00 PDT");
+		var endTime = new Date("December 30, 2028 17:00:00 PDT");			
 		var endTime = (Date.parse(endTime)) / 1000;
 		var now = new Date();
 		var now = (Date.parse(now) / 1000);
 		var timeLeft = endTime - now;
-		var days = Math.floor(timeLeft / 86400);
+		var days = Math.floor(timeLeft / 86400); 
 		var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
 		var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
 		var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
@@ -592,7 +592,7 @@ jQuery(function ($) {
 		btnDown = spinner.find('.minus-btn'),
 		min = input.attr('min'),
 		max = input.attr('max');
-
+		
 		btnUp.on('click', function() {
 			var oldValue = parseFloat(input.val());
 			if (oldValue >= max) {
@@ -622,17 +622,17 @@ jQuery(function ($) {
 		});
 		wow.init();
 	}
-
+	
 	// Go to Top
 	$(window).on('scroll', function(){
 		var scrolled = $(window).scrollTop();
 		if (scrolled > 600) $('.go-top').addClass('active');
 		if (scrolled < 600) $('.go-top').removeClass('active');
-	});
+	});  
 	$('.go-top').on('click', function() {
 		$("html, body").animate({ scrollTop: "0" },  500);
 	});
-
+	
 	// Preloader
 	$(window).on('load', function() {
 		$('.preloader-area').fadeOut();
@@ -640,7 +640,7 @@ jQuery(function ($) {
 
 	// Buy Now Btn
     // $('body').append("<a href='https://themeforest.net/checkout/from_item/30448262?license=regular&amp;support=bundle_6month&amp;_ga=2.101094145.1430237439.1644119533-1297998632.1635997908' class='buy-now-btn' target='_blank'><img src='assets/images/envato.png' alt='envato'/>Buy Now</a>");
-
+        
 }(jQuery));
 
 // function to set a given theme/color-scheme
