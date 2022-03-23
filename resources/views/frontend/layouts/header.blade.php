@@ -223,8 +223,8 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{route('cas')}}" class="nav-link">
-                                        Realisation
+                                    <a href="{{route('realisation')}}" class="nav-link">
+                                        Réalisations
                                         <i class="ri-add-line"></i>
                                     </a>
 
@@ -375,14 +375,14 @@
                 </div>
 
                 <div class="sidebar-contact-info">
-                    <h3>Contact Information</h3>
+                    <h3>Coordonnées</h3>
 
                     <ul class="info-list">
-                        <li><i class="ri-phone-fill"></i> <a href="tel:+11234567890">+1 (123) 456 7890</a></li>
+                        <li><i class="ri-phone-fill"></i> <a href="tel:+11234567890">(+221) 772050626</a></li>
 
-                        <li><i class="ri-mail-line"></i> <a href="/cdn-cgi/l/email-protection#88e0ede4e4e7c8f8e4e7eca6ebe7e5"><span class="__cf_email__" data-cfemail="c0a8a5acacaf80b0acafa4eea3afad">[email&#160;protected]</span></a></li>
+                        <li><i class="ri-mail-line"></i> <a href="mailto:contact@ameenaltech.com"><span class="__cf_email__" data-cfemail="c0a8a5acacaf80b0acafa4eea3afad">contact@ameenaltech.com</span></a></li>
 
-                        <li><i class="ri-map-pin-line"></i> 121 King St, Melbourne VIC <br> 3000, Australia.</li>
+                        <li><i class="ri-map-pin-line"></i> 121 Ouest FOIRE, Dakar <br> 3000, Sénégal.</li>
                     </ul>
                 </div>
 

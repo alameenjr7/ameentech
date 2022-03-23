@@ -32,3 +32,6 @@
         <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
         <!-- Custom JS -->
         <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+
+
+        @yield('scripts')

@@ -18,7 +18,7 @@
         <!-- End Preloader Area -->
 
         <!-- Start Navbar Area -->
-        @include('frontend.layouts.nav')
+        @include('frontend.layouts.header')
         <!-- End Navbar Area -->
 
         <!-- Start Content Area -->

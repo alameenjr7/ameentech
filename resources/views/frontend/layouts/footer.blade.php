@@ -1,3 +1,4 @@
+
 <!-- Start Footer Area -->
 <footer class="footer-area pt-100">
     <div class="container">
@@ -15,17 +16,17 @@
                     <ul class="widget-info">
                         <li>
                             <i class="ri-customer-service-line"></i>
-                            <a href="tel:3128959800">(312) 895-9800</a>
+                            <a href="tel:221-77205-06-26">(+221) 772050626</a>
                         </li>
 
                         <li>
                             <i class="ri-global-line"></i>
-                            <a href="/cdn-cgi/l/email-protection#c5ada0a9a9aaeba8a085b5a9aaa1eba6aaa8"><span class="__cf_email__" data-cfemail="cda5a8a1a1a2e3a0a88dbda1a2a9e3aea2a0">[email&#160;protected]</span></a>
+                            <a href="mailto:contact@ameenaltech.com"><span class="__cf_email__" data-cfemail="cda5a8a1a1a2e3a0a88dbda1a2a9e3aea2a0">contact@ameenaltech.com</span></a>
                         </li>
 
                         <li>
                             <i class="ri-map-pin-line"></i>
-                            121 St, Melbourne VIC 3000, Australia
+                            121 Ouest Foire, Dakar, Senegal
                         </li>
                     </ul>
                 </div>
@@ -127,8 +128,8 @@
         <div class="container">
             <div class="copyright-area-content">
                 <p>
-                    Copyright © <script data-cfasync="false" src="{{asset('frontend//cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script><script>document.write(new Date().getFullYear())</script> Plod. All Rights Reserved by
-                    <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                    Copyright © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> AmeenTech. Tous droits réservés par
+                    <a href="https://ameenaltech.com/" target="_blank">AmeenTech</a>
                 </p>
             </div>
         </div>

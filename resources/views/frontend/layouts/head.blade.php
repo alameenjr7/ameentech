@@ -1,6 +1,12 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    
+        <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'AmeenTech - Startups') }}</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
@@ -28,8 +34,6 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/dark.css')}}">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
-
-    <title>Plod - Technology & IT Startups HTML Template</title>
 
     <link rel="icon" type="image/png" href="{{asset('frontend/assets/images/favicon.png')}}">
 

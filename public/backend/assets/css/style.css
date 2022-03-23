@@ -6159,7 +6159,7 @@ Product Details Area Style
 
 .product-details-image {
   border-radius: 10px;
-  background-image: url(../../assets/images/products/product-2.jpg);
+  /* background-image: url(../../assets/images/products/product-2.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6362,7 +6362,7 @@ Product Details Area Style
 .product-details-desc .social-wrap li {
   display: inline-block;
   padding-right: 10px;
-  color: #242945;
+  color: #6f42c1;
 }
 
 .product-details-desc .social-wrap li span {

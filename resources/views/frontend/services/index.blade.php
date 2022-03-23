@@ -509,10 +509,10 @@
     <div class="container">
         <div class="overview-box">
             <div class="overview-content">
-                <h3>Let's Make Something Amazing Together</h3>
+                <h3>Faisons quelque chose d'incroyable ensemble</h3>
 
                 <div class="overview-btn">
-                    <a href="contact.html" class="overview-btn-one">Get Started</a>
+                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer</a>
                     <img src="{{asset('frontend/assets/images/overview/bar.png')}}" alt="image">
                 </div>
             </div>
