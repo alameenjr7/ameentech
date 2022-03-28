@@ -21,7 +21,7 @@ class UserTableSeeder extends Seeder
             [
                 'prenom'=>'Baba',
                 'nom'=>'NGOM',
-                'photo'=>'backend/assets/images/attached-1.jpg',
+                'photo'=>'frontend/assets/images/support/ceo.jpeg',
                 'email'=>'contact@ameenaltech.com',
                 // 'telephone'=>'772050626',
                 // 'adresse'=>'Ouest Foire',

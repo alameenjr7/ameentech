@@ -2,7 +2,7 @@
     <div class="container">
         <div class="support-content">
             <div class="tag">
-                <img src="{{asset('frontend/assets/images/experiences/tag-icon.png')}}" alt="image">
+                <img src="{{asset(get_setting('logo2'))}}" alt="image">
             </div>
 
             <h3>Assistance technique ultra-rapide, garantie</h3>
