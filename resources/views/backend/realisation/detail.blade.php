@@ -39,6 +39,8 @@
                             @php
                                 $cat = App\Models\Category::where('id',$realisations->categorie_id)->get()->first();
                                 $cat_child = App\Models\Category::where('id',$realisations->child_cat_id)->get()->first();
+                                $lang = App\Models\Language::where('id',$realisations->language_id)->get()->first();
+                                $lang_child = App\Models\Language::where('id',$realisations->child_lang_id)->get()->first();
                             @endphp
                             <span class="new-price">{{$cat->title}} @if($cat_child)<del>{{$cat_child->title}}</del>@endif</span>
                         </div>
@@ -84,19 +86,29 @@
                         <ul class="sku">
                             <li>
                                 STATUT:
-                                <span>{{$realisations->status}}</span>
+                                @if ($realisations->status == 'active')
+                                    <span style="color: #28c76f;">Activer</span>
+                                @else
+                                    <span style="color: #e0040f;">Desactiver</span>                   
+                                @endif
                             </li>
                             <li>
                                 Conditions:
-                                <span>{{$realisations->condition}}</span>
+                                @if ($realisations->condition == 'terminer')
+                                    <span style="color: #28c76f;">Terminer</span>
+                                @elseif ($realisations->condition == 'en_cours')
+                                    <span style="color: #fa9c30;">En Cours</span>
+                                @else
+                                    <span style="color: #0660e7;">Future</span>
+                                @endif
                             </li>
                             <li>
                                 Language:
-                                <span>Nike</span>
+                                <span>{{$lang->title}}  @if($lang_child) => {{$lang_child->title}}@endif</span>
                             </li>
                             <li>
                                 Categories:
-                                <span>{{$cat->title}}</span>
+                                <span>{{$cat->title}} @if($cat_child) => {{$cat_child->title}}@endif</span>
                             </li>
                         </ul>
 

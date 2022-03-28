@@ -5,8 +5,8 @@
                     <div class="main-responsive-menu">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="{{asset('frontend/assets/images/logo.png')}}" class="black-logo" alt="logo">
-                            <img src="{{asset('frontend/assets/images/white-logo.png')}}" class="white-logo" alt="logo">
+                                <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
+                            <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -17,8 +17,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="index.html">
-                            <img src="{{asset('frontend/assets/images/logo.png')}}" class="black-logo" alt="logo">
-                            <img src="{{asset('frontend/assets/images/white-logo.png')}}" class="white-logo" alt="logo">
+                            <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
+                            <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -106,7 +106,7 @@
                                     </ul> --}}
                                 </li>
 
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         Pages
                                         <i class="ri-add-line"></i>
@@ -220,7 +220,7 @@
                                             <a href="coming-soon.html" class="nav-link">Coming Soon</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> --}}
 
                                 <li class="nav-item">
                                     <a href="{{route('realisation')}}" class="nav-link">
@@ -244,8 +244,8 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{route('blog')}}" class="nav-link">
-                                        Blog
+                                    <a href="{{route('publication')}}" class="nav-link">
+                                        Publication
                                         <i class="ri-add-line"></i>
                                     </a>
 
@@ -279,10 +279,10 @@
                                     <i class="close-btn ri-close-line"></i>
                                     <div class="search-overlay search-popup">
                                         <div class='search-box'>
-                                            <form class="search-form">
-                                                <input class="search-input" name="search" placeholder="Search..." type="text">
+                                            <form class="search-form" action="{{route('search')}}" method="GET">
+                                                <input id="search_text" class="search-input form-control" name="query" placeholder="Rechercher..." type="search">
 
-                                                <button class="search-button" type="submit">
+                                                <button class="search-button" type="submit" value="Send">
                                                     <i class="ri-search-line"></i>
                                                 </button>
                                             </form>
@@ -291,7 +291,7 @@
                                 </div>
 
                                 <div class="option-item">
-                                    <a href="contact.html" class="default-btn">Let’s Talk <i class="ri-message-line"></i><span></span></a>
+                                    <a href="#" class="default-btn">J'ai un Projet! <i class="ri-message-line"></i><span></span></a>
                                 </div>
 
                                 <div class="option-item">
@@ -323,10 +323,10 @@
                                     <i class="close-btn ri-close-line"></i>
                                     <div class="search-overlay search-popup">
                                         <div class='search-box'>
-                                            <form class="search-form">
-                                                <input class="search-input" name="search" placeholder="Search..." type="text">
+                                            <form class="search-form" action="{{route('search')}}" method="GET">
+                                                <input  type="search" id="search_text" name="query" class="search-input form-control" placeholder="Rechercher...">
 
-                                                <button class="search-button" type="submit">
+                                                <button class="search-button" type="submit" value="Send">
                                                     <i class="ri-search-line"></i>
                                                 </button>
                                             </form>
@@ -335,7 +335,7 @@
                                 </div>
 
                                 <div class="option-item">
-                                    <a href="contact.html" class="default-btn">Let’s Talk <i class="ri-message-line"></i><span></span></a>
+                                    <a href="{{route('contact')}}" class="default-btn">Parlons Maintenant! <i class="ri-message-line"></i><span></span></a>
                                 </div>
 
                                 <div class="option-item">
@@ -359,18 +359,18 @@
 
             <div class="modal-body">
                 <div class="title">
-                    <a href="index.html">
-                        <img src="{{asset('frontend/assets/images/logo.png')}}" class="black-logo" alt="logo">
-                        <img src="{{asset('frontend/assets/images/white-logo.png')}}" class="white-logo" alt="logo">
+                    <a href="{{route('acceuil')}}">
+                        <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
+                        <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
                     </a>
                 </div>
 
                 <div class="sidebar-content">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>A Propos de Nous!</h3>
+                    <p>{{get_setting('background_footer')}}</p>
 
                     <div class="sidebar-btn">
-                        <a href="contact.html" class="default-btn">Let’s Talk <i class="ri-message-line"></i><span></span></a>
+                        <a href="{{route('contact')}}" class="default-btn">Parlons Maintenant! <i class="ri-message-line"></i><span></span></a>
                     </div>
                 </div>
 
@@ -378,19 +378,20 @@
                     <h3>Coordonnées</h3>
 
                     <ul class="info-list">
-                        <li><i class="ri-phone-fill"></i> <a href="tel:+11234567890">(+221) 772050626</a></li>
+                        <li><i class="ri-phone-fill"></i> <a href="tel:+11234567890">{{get_setting('telephone1')}}</a></li>
 
-                        <li><i class="ri-mail-line"></i> <a href="mailto:contact@ameenaltech.com"><span class="__cf_email__" data-cfemail="c0a8a5acacaf80b0acafa4eea3afad">contact@ameenaltech.com</span></a></li>
+                        <li><i class="ri-mail-line"></i> <a href="mailto:{{get_setting('email_1')}}"><span class="__cf_email__" data-cfemail="c0a8a5acacaf80b0acafa4eea3afad">{{get_setting('email_1')}}</span></a></li>
 
-                        <li><i class="ri-map-pin-line"></i> 121 Ouest FOIRE, Dakar <br> 3000, Sénégal.</li>
+                        <li><i class="ri-map-pin-line"></i> {{get_setting('adresse')}}, {{get_setting('lot')}}, <br>{{get_setting('appartement')}}</li>
                     </ul>
                 </div>
 
                 <ul class="sidebar-social-list">
-                    <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="{{get_setting('facebook_url')}}" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="{{get_setting('twitter_url')}}" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                    <li><a href="{{get_setting('linkedin_url')}}" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="{{get_setting('instagram_url')}}" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="{{get_setting('youtube_url')}}" target="_blank"><i class="ri-youtube-fill"></i></a></li>
                 </ul>
             </div>
         </div>

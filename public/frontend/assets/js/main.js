@@ -491,11 +491,11 @@ jQuery(function ($) {
 	$(".newsletter-form").validator().on("submit", function (event) {
 		if (event.isDefaultPrevented()) {
 			formErrorSub();
-			submitMSGSub(false, "Please enter your email correctly.");
+			submitMSGSub(false, "Veuillez entrer votre email correctement.");
 		} 
-		else {
-			event.preventDefault();
-		}
+		// else {
+		// 	event.preventDefault();
+		// }
 	});
 	function callbackFunction (resp) {
 		if (resp.result === "success") {
@@ -507,7 +507,7 @@ jQuery(function ($) {
 	}
 	function formSuccessSub(){
 		$(".newsletter-form")[0].reset();
-		submitMSGSub(true, "Thank you for subscribing!");
+		submitMSGSub(true, "Merci de vous être abonné!");
 		setTimeout(function() {
 			$("#validator-newsletter").addClass('hide');
 		}, 4000)
@@ -528,10 +528,10 @@ jQuery(function ($) {
 		$("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
 	}
 	// AJAX MailChimp
-	$(".newsletter-form").ajaxChimp({
-		url: "https://envytheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9", // Your url MailChimp
-		callback: callbackFunction
-	});
+	// $(".newsletter-form").ajaxChimp({
+	// 	url: "https://127.0.0.1:8000/mail-contact/", // Your url MailChimp
+	// 	callback: callbackFunction
+	// });
 
 	// FAQ Accordion
 	$('.accordion').find('.accordion-title').on('click', function(){
@@ -641,6 +641,8 @@ jQuery(function ($) {
 	// Buy Now Btn
     // $('body').append("<a href='https://themeforest.net/checkout/from_item/30448262?license=regular&amp;support=bundle_6month&amp;_ga=2.101094145.1430237439.1644119533-1297998632.1635997908' class='buy-now-btn' target='_blank'><img src='assets/images/envato.png' alt='envato'/>Buy Now</a>");
         
+
+
 }(jQuery));
 
 // function to set a given theme/color-scheme

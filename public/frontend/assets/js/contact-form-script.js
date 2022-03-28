@@ -16,16 +16,16 @@
 
     function submitForm(){
         // Initiate Variables With Form Content
-        var name = $("#name").val();
+        var full_name = $("#full_name").val();
         var email = $("#email").val();
-        var msg_subject = $("#msg_subject").val();
-        var phone_number = $("#phone_number").val();
+        var sujet = $("#sujet").val();
+        var telephone = $("#telephone").val();
         var message = $("#message").val();
 
         $.ajax({
             type: "POST",
-            url: "assets/php/form-process.php",
-            data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&phone_number=" + phone_number + "&message=" + message,
+            url: "/message-contact",
+            data: "full_name=" + full_name + "&email=" + email + "&sujet=" + sujet + "&telephone=" + telephone + "&message=" + message,
             success : function(text){
                 if (text == "success"){
                     formSuccess();

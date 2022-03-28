@@ -35,332 +35,97 @@
 <!-- Start Blog Area -->
 <div class="blog-area pt-100 pb-100">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-1.jpg')}}" alt="image"></a>
-                            </div>
+        <form action="{{route('publication.filter')}}" method="POST" class="container" data-bs-toggle="validator">
+            @csrf
+            <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="row">
+                            @if (count($publications)>0)
+                                @foreach ($publications as $publication)
+                                <div class="col-lg-6 col-md-6">
+                                        <div class="single-blog">
+                                            <div class="blog-image">
+                                                <a href="{{route('publications.detail',$publication->slug)}}">
+                                                    <img src="{{asset($publication->photo)}}" alt="image">
+                                                </a>
+                                            </div>
 
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Branding</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Branding Involves Developing a Strategy to Creating a Point of Differentiation.</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
+                                            <div class="blog-content">
+                                                @php
+                                                    $comments = App\Models\PublicationReview::where('publication_id',$publication->id)->count();
+                                                    
+                                                    $cat = App\Models\Category::where('id',$publication->cat_id)->get()->first();
+                                                @endphp
+                                                <ul class="entry-meta">
+                                                    <li class="tag">{{$cat->title}}</li>
+                                                    <li>
+                                                        <i class="ri-time-line"></i>
+                                                        {{$publication->getCreatedAt()}}
+                                                    </li>
+                                                    <li>
+                                                        <i class="ri-message-2-line"></i>
+                                                        ({{$comments}}) Commentaire(s)
+                                                    </li>
+                                                </ul>
+                                                <h3>
+                                                    <a href="{{route('publications.detail',$publication->slug)}}">{{$publication->title}}</a>
+                                                </h3>
+                                                <a href="{{route('publications.detail',$publication->slug)}}" class="blog-btn">Voir Plus <i class="ri-arrow-right-line"></i></a>
+                                            </div>
+                                        </div>
+                                </div>
+                                @endforeach
+                            @else
+                                <p class="text-center">Pas de Publication disponible !</p>
+                            @endif
+
+                            {{ $publications->appends($_GET)->links('vendor.pagination.custom') }}
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-2.jpg')}}" alt="image"></a>
-                            </div>
+                <div class="col-lg-4 col-md-12 floar">
+                    <aside class="widget-area">
+                        {{-- <div class="widget widget_search">
+                            @include('frontend.blogs._recherche')
+                        </div> --}}
 
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Agency</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Design is a Plan or Specification For The Construction of an Object.</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                        @if (count($cats)>0)
+                            @include('frontend.blogs._post_cats')
+                        @endif
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-3.jpg')}}" alt="image"></a>
+                        @if (count($languages)>0)
+                            @include('frontend.blogs._lang_post')
+                        @endif
+                        
+                        @if (count($lastPublications)>0)
+                            <div class="widget widget_plod_posts_thumb">
+                                <h3 class="widget-title">Dernières Publications</h3>
+                                
+                                @include('frontend.blogs._last_post')
                             </div>
+                        @endif
 
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Marketing</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Branding Involves Developing the Strategy to Create a Point.</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
+                        {{-- <div class="widget widget_tag_cloud">
+                            <h3 class="widget-title">Popular Tags</h3>
+
+                            <div class="tagcloud">
+                                <a href="#">Agency</a>
+                                <a href="#">Branding</a>
+                                <a href="#">Marketing</a>
+                                <a href="#">Design</a>
+                                <a href="#">Development</a>
+                                <a href="#">Consulting</a>
+                                <a href="#">Startup</a>
+                                <a href="#">Popular</a>
+                                <a href="#">WordPress</a>
+                                <a href="#">Financial</a>
+                                <a href="#">Branding</a>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-4.jpg')}}" alt="image"></a>
-                            </div>
-
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Agency</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">The Data-Driven Approach to Understanding</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-5.jpg')}}" alt="image"></a>
-                            </div>
-
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Branding</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Conversion Rate the Sales Funnel Optimization</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-6.jpg')}}" alt="image"></a>
-                            </div>
-
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Startup</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Business Data is Changing the World’s Energy</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-7.jpg')}}" alt="image"></a>
-                            </div>
-
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Development</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">The Data Surrounding Higher Education</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img src="{{asset('frontend/assets/images/blog/blog-8.jpg')}}" alt="image"></a>
-                            </div>
-
-                            <div class="blog-content">
-                                <ul class="entry-meta">
-                                    <li class="tag">Design</li>
-                                    <li>
-                                        <i class="ri-time-line"></i>
-                                        March 14, 2022
-                                    </li>
-                                    <li>
-                                        <i class="ri-message-2-line"></i>
-                                        (0) Comment
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="blog-details.html">Finding the Blocks of Neighboring Fields</a>
-                                </h3>
-                                <a href="blog-details.html" class="blog-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="pagination-area">
-                            <a href="#" class="prev page-numbers"><i class="ri-arrow-left-line"></i></a>
-                            <span class="page-numbers current" aria-current="page">1</span>
-                            <a href="#" class="page-numbers">2</a>
-                            <a href="#" class="page-numbers">3</a>
-                            <a href="#" class="page-numbers">4</a>
-                            <a href="#" class="next page-numbers"><i class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
+                        </div> --}}
+                    </aside>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-12">
-                <aside class="widget-area">
-                    <div class="widget widget_search">
-                        <form class="search-form">
-                            <input type="search" class="search-field" placeholder="Search Something">
-                            <button type="submit"><i class="ri-search-line"></i></button>
-                        </form>
-                    </div>
-
-                    <div class="widget widget_categories">
-                        <h3 class="widget-title">Post Categories</h3>
-
-                        <ul>
-                            <li><a href="#">Brand Identity Design(20)</a></li>
-                            <li><a href="#">Digital Marketing(08)</a></li>
-                            <li><a href="#">Design and Development(15)</a></li>
-                            <li><a href="#">IT Startup Consulting(22)</a></li>
-                            <li><a href="#">Cloud Computing Service(12)</a></li>
-                            <li><a href="#">Domain and Hosting(06)</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="widget widget_plod_posts_thumb">
-                        <h3 class="widget-title">Popular Posts</h3>
-
-                        <article class="item">
-                            <a href="blog-details.html" class="thumb">
-                                <span class="fullimage cover bg1" role="img"></span>
-                            </a>
-
-                            <div class="info">
-                                <h4 class="title usmall">
-                                    <a href="blog-details.html">Design is a Plan or Specification for the Construction.</a>
-                                </h4>
-
-                                <span><i class="ri-time-line"></i> March 14, 2022</span>
-                            </div>
-                        </article>
-
-                        <article class="item">
-                            <a href="blog-details.html" class="thumb">
-                                <span class="fullimage cover bg2" role="img"></span>
-                            </a>
-
-                            <div class="info">
-                                <h4 class="title usmall">
-                                    <a href="blog-details.html">Branding Involves Developing Strategy to Create a Point.</a>
-                                </h4>
-
-                                <span><i class="ri-time-line"></i> March 14, 2022</span>
-                            </div>
-                        </article>
-
-                        <article class="item">
-                            <a href="blog-details.html" class="thumb">
-                                <span class="fullimage cover bg3" role="img"></span>
-                            </a>
-
-                            <div class="info">
-                                <h4 class="title usmall">
-                                    <a href="blog-details.html">Digital Marketing is Tatally Different From Tradetion Marketing</a>
-                                </h4>
-
-                                <span><i class="ri-time-line"></i> March 14, 2022</span>
-                            </div>
-                        </article>
-
-                        <article class="item">
-                            <a href="blog-details.html" class="thumb">
-                                <span class="fullimage cover bg4" role="img"></span>
-                            </a>
-
-                            <div class="info">
-                                <h4 class="title usmall">
-                                    <a href="blog-details.html">The Data-Driven Approach to Understanding</a>
-                                </h4>
-
-                                <span><i class="ri-time-line"></i> March 14, 2022</span>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="widget widget_tag_cloud">
-                        <h3 class="widget-title">Popular Tags</h3>
-
-                        <div class="tagcloud">
-                            <a href="#">Agency</a>
-                            <a href="#">Branding</a>
-                            <a href="#">Marketing</a>
-                            <a href="#">Design</a>
-                            <a href="#">Development</a>
-                            <a href="#">Consulting</a>
-                            <a href="#">Startup</a>
-                            <a href="#">Popular</a>
-                            <a href="#">WordPress</a>
-                            <a href="#">Financial</a>
-                            <a href="#">Branding</a>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-        </div>
+        </form>
     </div>
 
     <div class="blog-shape-1" data-speed="0.08" data-revert="true">

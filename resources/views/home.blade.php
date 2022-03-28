@@ -13,7 +13,7 @@
                     </div>
                     
                     <div class="flex-shrink-0 align-self-center">
-                        <img src="assets/images/icon/discount.png" alt="Images">
+                        <img src="{{asset('backend/assets/images/icon/discount.png')}}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     </div>
                     
                     <div class="flex-shrink-0 align-self-center">
-                        <img src="assets/images/icon/user.png" alt="Images">
+                        <img src="{{asset('backend/assets/images/icon/user.png')}}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     </div>
                     
                     <div class="flex-shrink-0 align-self-center">
-                        <img src="assets/images/icon/groop.png" alt="Images">
+                        <img src="{{asset('backend/assets/images/icon/groop.png')}}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     </div>
                     
                     <div class="flex-shrink-0 align-self-center">
-                        <img src="assets/images/icon/discount.png" alt="Images">
+                        <img src="{{asset('backend/assets/images/icon/discount.png')}}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                             <div class="col-lg-3 col-sm-6 col-md-3">
                                 <div class="active-single-item">
                                     <p>
-                                        <img src="assets/images/icon/user-2.png" alt="Images">
+                                        <img src="{{asset('backend/assets/images/icon/user-2.png')}}" alt="Images">
                                         Users
                                         <span>340 K</span>
                                     </p>
@@ -117,7 +117,7 @@
                             <div class="col-lg-3 col-sm-6 col-md-3">
                                 <div class="active-single-item">
                                     <p>
-                                        <img src="assets/images/icon/curser.png" alt="Images">
+                                        <img src="{{asset('backend/assets/images/icon/curser.png')}}" alt="Images">
                                         Click
                                         <span>500 M</span>
                                     </p>
@@ -127,7 +127,7 @@
                             <div class="col-lg-3 col-sm-6 col-md-3">
                                 <div class="active-single-item">
                                     <p>
-                                        <img src="assets/images/icon/discount-2.png" alt="Images">
+                                        <img src="{{asset('backend/assets/images/icon/discount-2.png')}}" alt="Images">
                                         Sales
                                         <span>435 $</span>
                                     </p>
@@ -137,7 +137,7 @@
                             <div class="col-lg-3 col-sm-6 col-md-3">
                                 <div class="active-single-item">
                                     <p>
-                                        <img src="assets/images/icon/items.png" alt="Images">
+                                        <img src="{{asset('backend/assets/images/icon/items.png')}}" alt="Images">
                                         Items
                                         <span>12,350</span>
                                     </p>
@@ -248,7 +248,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-1.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-1.png')}}" alt="Images">
                             Adam Smith
                         </td>
                         <td>
@@ -262,7 +262,7 @@
                             Paid
                         </td>
                         <td>
-                            <img src="assets/images/customer/mastercard.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/mastercard.png')}}" alt="Images">
                             Mastercard
                         </td>
                         <td>
@@ -283,7 +283,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-2.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-2.png')}}" alt="Images">
                             Victor James
                         </td>
                         <td>
@@ -297,7 +297,7 @@
                             Canceled
                         </td>
                         <td>
-                            <img src="assets/images/customer/visa.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/visa.png')}}" alt="Images">
                             Visa
                         </td>
                         <td>
@@ -318,7 +318,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-3.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-3.png')}}" alt="Images">
                             Anna Belly
                         </td>
                         <td>
@@ -332,7 +332,7 @@
                             Refunded
                         </td>
                         <td>
-                            <img src="assets/images/customer/paypal.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/paypal.png')}}" alt="Images">
                             PayPal
                         </td>
                         <td>
@@ -353,7 +353,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-4.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-4.png')}}" alt="Images">
                             John Karahan
                         </td>
                         <td>
@@ -367,7 +367,7 @@
                             Paid
                         </td>
                         <td>
-                            <img src="assets/images/customer/mastercard.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/mastercard.png')}}" alt="Images">
                             Mastercard
                         </td>
                         <td>
@@ -388,7 +388,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-5.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-5.png')}}" alt="Images">
                             Emmeli Smith
                         </td>
                         <td>
@@ -402,7 +402,7 @@
                             Paid
                         </td>
                         <td>
-                            <img src="assets/images/customer/mastercard.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/mastercard.png')}}" alt="Images">
                             Mastercard
                         </td>
                         <td>
@@ -423,7 +423,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-6.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-6.png')}}" alt="Images">
                             Jonathon Ronan
                         </td>
                         <td>
@@ -437,7 +437,7 @@
                             Paid
                         </td>
                         <td>
-                            <img src="assets/images/customer/paypal.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/paypal.png')}}" alt="Images">
                             PayPal
                         </td>
                         <td>
@@ -458,7 +458,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-7.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-7.png')}}" alt="Images">
                             Adnan Hyder
                         </td>
                         <td>
@@ -472,7 +472,7 @@
                             Canceled
                         </td>
                         <td>
-                            <img src="assets/images/customer/mastercard.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/mastercard.png')}}" alt="Images">
                             Mastercard
                         </td>
                         <td>
@@ -493,7 +493,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-8.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-8.png')}}" alt="Images">
                             Adnan Smith
                         </td>
                         <td>
@@ -507,7 +507,7 @@
                             Paid
                         </td>
                         <td>
-                            <img src="assets/images/customer/mastercard.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/mastercard.png')}}" alt="Images">
                             Mastercard
                         </td>
                         <td>
@@ -528,7 +528,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="assets/images/customer/customer-2.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/customer-2.png')}}" alt="Images">
                             Victor James
                         </td>
                         <td>
@@ -542,7 +542,7 @@
                             Canceled
                         </td>
                         <td>
-                            <img src="assets/images/customer/visa.png" alt="Images">
+                            <img src="{{asset('backend/assets/images/customer/visa.png')}}" alt="Images">
                             Visa
                         </td>
                         <td>

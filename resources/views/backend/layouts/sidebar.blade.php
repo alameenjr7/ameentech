@@ -2,7 +2,7 @@
 <div class="side-menu-area">
     <div class="side-menu-logo bg-linear">
         <a href="ecommerce.html" class="navbar-brand d-flex align-items-center">
-            <img src="{{asset('backend/assets/images/logo.png')}}" alt="image">
+            <img src="{{asset(get_setting('logo'))}}" alt="image">
             <span>AmeenTech</span>
         </a>
 

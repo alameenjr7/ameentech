@@ -29,6 +29,20 @@
             <input type="text" name="title" value="{{old('title')}}" class="form-control" id="inputEmail4">
         </div>
         <div class="col-md-12">
+            <label for="inputState" class="form-label">Icon</label>
+            <select id="inputState" name="icon" class="form-select form-control">
+                <option selected>--Choisir--</option>
+                <option value="ri-quill-pen-line" {{old('icon')=='ri-quill-pen-line' ? 'selected' : ''}}>icon 1</option>
+                <option value="ri-pie-chart-line" {{old('icon')=='ri-pie-chart-line' ? 'selected' : ''}}>icon 2</option>
+                <option value="ri-lightbulb-line" {{old('icon')=='ri-lightbulb-line' ? 'selected' : ''}}>icon 3</option>
+                <option value="ri-customer-service-2-line" {{old('icon')=='ri-customer-service-2-line' ? 'selected' : ''}}>icon 4</option>
+                <option value="ri-cloud-line" {{old('icon')=='ri-cloud-line' ? 'selected' : ''}}>icon 5</option>
+                <option value="ri-layout-row-line" {{old('icon')=='ri-layout-row-line' ? 'selected' : ''}}>icon 6</option>
+                <option value="ri-hard-drive-line" {{old('icon')=='ri-hard-drive-line' ? 'selected' : ''}}>icon 7</option>
+                <option value="ri-focus-line" {{old('icon')=='ri-focus-line' ? 'selected' : ''}}>icon 8</option>
+            </select>
+        </div>
+        <div class="col-md-12">
             <label for="inputPassword4" class="form-label">Photo</label>
             <div class="input-group">
                 <span class="input-group-btn">

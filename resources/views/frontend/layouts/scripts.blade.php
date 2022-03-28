@@ -32,6 +32,35 @@
         <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
         <!-- Custom JS -->
         <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+        
+		<script src="{{asset('backend/assets/js/toastr.min.js')}}"></script>
+		<script src="{{asset('backend/assets/js/toastr.script.min.js')}}"></script>
+        
+        {{-- <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script> --}}
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+        @if (session()->has('success'))
+        <script>
+            const notyf = new Notyf({
+                dismissible: true,
+                duration: 4000,
+                position: {
+                    x:'right',
+                    y:'top'
+                }
+            })
+            notyf.success('{{ session('success') }}')
+        </script>
+        @endif
+
+            
+        @if (session()->has('error'))
+            <script>
+                const notyf = new Notyf({dismissible:true})
+                notyf.error('{{ session('error') }}')
+            </script>
+        @endif
+
 
 
         @yield('scripts')

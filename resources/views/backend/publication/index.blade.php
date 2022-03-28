@@ -75,7 +75,11 @@
                                         {{$publication->title}}
                                     </a>
                                 </h3>
-                                <span class="price">{{$publication->conditions}}</span>
+                                @if ($publication->conditions == 'publier')
+                                    <span class="price" style="color: #28c76f;">Publier</span>
+                                @else
+                                    <span class="price" style="color: #0660e7;">Future</span>
+                                @endif
                             </div>
 
                             <div class="flex-shrink-0 align-self-center">

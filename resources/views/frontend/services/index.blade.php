@@ -33,86 +33,24 @@
 <!-- End Page Banner Area -->
 
 <!-- Start Services Area -->
+@if (count($services)>0)
 <div class="services-area pt-100 pb-70">
     <div class="container">
         <div class="row justify-content-center">
+            @foreach ($services as $service)
             <div class="col-lg-4 col-md-6">
                 <div class="single-services-item">
                     <div class="icon">
-                        <i class="ri-quill-pen-line"></i>
+                        <i class="{{$service->icon}}"></i>
                     </div>
                     <h3>
-                        <a href="services-details.html">Brand Identity Design</a>
+                        <a href="#">{{$service->title}}</a>
                     </h3>
-                    <p>Branding just like your personal identity makes you uniquely you your brand identity is the special sauce of your business that sets you apart from every other Tom Dick and Harry Inc.</p>
-                    <a href="services-details.html" class="services-btn">Read More <i class="ri-arrow-right-line"></i></a>
+                    <p>{{$service->description}}</p>
+                    <a href="#" class="services-btn">Lire Plus <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services-item">
-                    <div class="icon bg-36CC72">
-                        <i class="ri-pie-chart-line"></i>
-                    </div>
-                    <h3>
-                        <a href="services-details.html">Digital Marketing</a>
-                    </h3>
-                    <p>Plod offering you the best digital marketing services to just like your personal identity makes you uniquely you, your brand identity is the special sauce of your to our customer.</p>
-                    <a href="services-details.html" class="services-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services-item">
-                    <div class="icon bg-FF414B">
-                        <i class="ri-lightbulb-line"></i>
-                    </div>
-                    <h3>
-                        <a href="services-details.html">Design and Development</a>
-                    </h3>
-                    <p>Plod offering you the best digital marketing services to just like your personal identity makes you uniquely you, your brand identity is the special sauce of your to our customer.</p>
-                    <a href="services-details.html" class="services-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services-item">
-                    <div class="icon bg-FF6D3D">
-                        <i class="ri-customer-service-2-line"></i>
-                    </div>
-                    <h3>
-                        <a href="services-details.html">IT Consulting Service</a>
-                    </h3>
-                    <p>Plod offering you the best digital marketing services to just like your personal identity makes you uniquely you, your brand identity is the special sauce of your to our customer.</p>
-                    <a href="services-details.html" class="services-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services-item">
-                    <div class="icon bg-8932F8">
-                        <i class="ri-cloud-line"></i>
-                    </div>
-                    <h3>
-                        <a href="services-details.html">Cloud Computing</a>
-                    </h3>
-                    <p>Plod offering you the best digital marketing services to just like your personal identity makes you uniquely you, your brand identity is the special sauce of your to our customer.</p>
-                    <a href="services-details.html" class="services-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services-item">
-                    <div class="icon bg-FFCA40">
-                        <i class="ri-layout-row-line"></i>
-                    </div>
-                    <h3>
-                        <a href="services-details.html">Domain and Hosting</a>
-                    </h3>
-                    <p>Plod offering you the best digital marketing services to just like your personal identity makes you uniquely you, your brand identity is the special sauce of your to our customer.</p>
-                    <a href="services-details.html" class="services-btn">Read More <i class="ri-arrow-right-line"></i></a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
@@ -132,6 +70,7 @@
         <img src="{{asset('frontend/assets/images/services/shape-5.png')}}" alt="image">
     </div>
 </div>
+@endif
 <!-- End Services Area -->
 
 <!-- Start Process Area -->
@@ -142,14 +81,14 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-process">
                         <i class="ri-hard-drive-line"></i>
-                        <p>Research</p>
+                        <p>Recherche</p>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-process bg-36CC72">
                         <i class="ri-pie-chart-line"></i>
-                        <p>Analyze</p>
+                        <p>Analyser</p>
                     </div>
                 </div>
 
@@ -163,7 +102,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-process bg-FF6D3D">
                         <i class="ri-focus-line"></i>
-                        <p>Testing</p>
+                        <p>Essai</p>
                     </div>
                 </div>
             </div>
@@ -177,333 +116,13 @@
 <!-- End Process Area -->
 
 <!-- Start Support Area -->
-<div class="support-area">
-    <div class="container">
-        <div class="support-content">
-            <div class="tag">
-                <img src="{{asset('frontend/assets/images/experiences/tag-icon.png')}}" alt="image">
-            </div>
-
-            <h3>Lightning-Fast Tech Support, Guaranteed</h3>
-            <p>As a midsize software development company, we combine the best of both worlds. We have the focus and speed of the small IT outsourcing companies along with the scalability and expertise of the big ones.</p>
-            <span>Regan Rosen, CEO at Flod Agency</span>
-        </div>
-    </div>
-
-    <div class="support-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/support/shape-1.png')}}" alt="image">
-    </div>
-    <div class="support-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/support/shape-2.png')}}" alt="image">
-    </div>
-    <div class="support-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/support/shape-3.png')}}" alt="image">
-    </div>
-    <div class="support-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/support/shape-4.png')}}" alt="image">
-    </div>
-    <div class="support-shape-5" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/support/shape-5.png')}}" alt="image">
-    </div>
-    <div class="support-shape-6" data-speed="0.02" data-revert="true">
-        <img src="{{asset('frontend/assets/images/support/shape-6.png')}}" alt="image">
-    </div>
-</div>
+@include('frontend.layouts._support')
 <!-- End Support Area -->
 
 <!-- Start Clients Area -->
-<div class="clients-area bg-white-color ptb-100">
-    <div class="container">
-        <div class="section-title">
-            <h2>Our Respected Clients</h2>
-            <p>Which peoples loves us a lot, please check out what about says about us</p>
-        </div>
-
-        <div class="clients-slides owl-carousel owl-theme">
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-1.png')}}" alt="image">
-                <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
-
-                <div class="title-name">
-                    <h3>Deanna Hodges</h3>
-                    <span>Spotify Developer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-2.png')}}" alt="image">
-                <p>‘’Plod is the best digital agency in our area As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies.</p>
-
-                <div class="title-name">
-                    <h3>Londynn Vargas</h3>
-                    <span>Web Designer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-3.png')}}" alt="image">
-                <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
-
-                <div class="title-name">
-                    <h3>James Anderson</h3>
-                    <span>Web Developer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-1.png')}}" alt="image">
-                <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
-
-                <div class="title-name">
-                    <h3>Deanna Hodges</h3>
-                    <span>Spotify Developer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-2.png')}}" alt="image">
-                <p>‘’Plod is the best digital agency in our area As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies.</p>
-
-                <div class="title-name">
-                    <h3>Londynn Vargas</h3>
-                    <span>Web Designer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-3.png')}}" alt="image">
-                <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
-
-                <div class="title-name">
-                    <h3>James Anderson</h3>
-                    <span>Web Developer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-1.png')}}" alt="image">
-                <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
-
-                <div class="title-name">
-                    <h3>Deanna Hodges</h3>
-                    <span>Spotify Developer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-2.png')}}" alt="image">
-                <p>‘’Plod is the best digital agency in our area As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies.</p>
-
-                <div class="title-name">
-                    <h3>Londynn Vargas</h3>
-                    <span>Web Designer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-
-            <div class="clients-item">
-                <img src="{{asset('frontend/assets/images/clients/clients-3.png')}}" alt="image">
-                <p>‘’As a midsize software developent company we combine the best of both worlds. We have the focus and speed of the small it outsurcing companies along with the scalability and expertise of the big ones.’’</p>
-
-                <div class="title-name">
-                    <h3>James Anderson</h3>
-                    <span>Web Developer</span>
-                </div>
-
-                <div class="star-rating">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-
-                <div class="shape-1">
-                    <img src="{{asset('frontend/assets/images/clients/shape-4.png')}}" alt="image">
-                </div>
-
-                <div class="shape-2">
-                    <img src="{{asset('frontend/assets/images/clients/shape-5.png')}}" alt="image">
-                </div>
-
-                <div class="shape-3">
-                    <img src="{{asset('frontend/assets/images/clients/shape-6.png')}}" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="clients-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/clients/shape-1.png')}}" alt="image">
-    </div>
-    <div class="clients-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/clients/shape-2.png')}}" alt="image">
-    </div>
-    <div class="clients-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/clients/shape-3.png')}}" alt="image">
-    </div>
-</div>
+@include('frontend.layouts._client')
 <!-- End Clients Area -->
-
+<hr style="color: transparent;">
 <!-- Start Overview Area -->
 <div class="overview-area pb-100">
     <div class="container">

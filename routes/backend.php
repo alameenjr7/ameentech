@@ -53,4 +53,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
     //Pub Review
     Route::get('pub-commentaires',[App\Http\Controllers\Backend\PublicationReviewController::class, 'index'])->name('pub.commentaires.index');
     Route::post('pub-review-status',[App\Http\Controllers\Backend\PublicationReviewController::class, 'pubReviewStatus'])->name('pub.review.status');
+
+    //Setting section
+    Route::get('parametre',[App\Http\Controllers\SettingController::class, 'index'])->name('parametre');
+    Route::put('parametre',[App\Http\Controllers\SettingController::class, 'settingsUpdate'])->name('parametre.update');
 });

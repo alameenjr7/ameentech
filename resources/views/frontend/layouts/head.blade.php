@@ -35,5 +35,11 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
 
-    <link rel="icon" type="image/png" href="{{asset('frontend/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" href="{{asset(get_setting('favicon'))}}">
+
+    <link rel="stylesheet" href="{{asset('backend/assets/css/plugins/toastr.css')}}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    {{-- <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"> --}}
+
 

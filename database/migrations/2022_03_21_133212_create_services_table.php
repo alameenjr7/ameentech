@@ -19,6 +19,7 @@ return new class extends Migration
             $table->longText('description');
             $table->string('slug')->unique();
             $table->string('photo');
+            $table->string('icon')->nullable();
             $table->enum('status',['active', 'inactive'])->default('active');
             $table->timestamps();
         });

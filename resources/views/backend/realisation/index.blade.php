@@ -75,7 +75,13 @@
                                         {{$realisation->title}}
                                     </a>
                                 </h3>
-                                <span class="price">{{$realisation->condition}}</span>
+                                @if ($realisation->condition == 'terminer')
+                                    <span class="price" style="color: #28c76f;">Terminer</span>
+                                @elseif ($realisation->condition == 'en_cours')
+                                    <span class="price" style="color: #fa9c30;">En Cours</span>
+                                @else
+                                    <span class="price" style="color: #0660e7;">Future</span>
+                                @endif
                             </div>
 
                             <div class="flex-shrink-0 align-self-center">

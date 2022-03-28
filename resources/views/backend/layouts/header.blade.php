@@ -44,74 +44,55 @@
                     <div class="dropdown-menu">
                         <div class="dropdown-header d-flex justify-content-between align-items-center bg-linear">
                             <span class="title d-inline-block">Web Apps</span>
-                            <span class="edit-btn d-inline-block">Edit</span>
+                            {{-- <span class="edit-btn d-inline-block">Edit</span> --}}
                         </div>
 
                         <div class="dropdown-body" data-simplebar>
                             <div class="d-flex flex-wrap align-items-center">
-                                <a href="#" class="dropdown-item">
+                                <a href="https://myaccount.google.com/" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-account.png')}}" alt="image">
                                     <span class="d-block mb-0">Account</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
+                                <a href="https://www.google.com/" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-google.png')}}" alt="image">
                                     <span class="d-block mb-0">Search</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
+                                <a href="https://www.google.com/maps" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-map.png')}}" alt="image">
                                     <span class="d-block mb-0">Maps</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
+                                <a href="https://www.youtube.com/" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-youtube.png')}}" alt="image">
                                     <span class="d-block mb-0">YouTube</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
-                                    <img src="{{asset('backend/assets/images/apps/icon-playstore.png')}}" alt="image">
-                                    <span class="d-block mb-0">Play</span>
-                                </a>
-
-                                <a href="#" class="dropdown-item">
+                                <a href="https://mail.google.com/mail/u/0/#inbox" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-gmail.png')}}" alt="image">
                                     <span class="d-block mb-0">Gmail</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
+                                <a href="https://drive.google.com/" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-drive.png')}}" alt="image">
                                     <span class="d-block mb-0">Drive</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
-                                    <img src="{{asset('backend/assets/images/apps/icon-calendar.png')}}" alt="image">
-                                    <span class="d-block mb-0">Calendar</span>
+                                <a href="https://contacts.google.com/" class="dropdown-item">
+                                    <img src="{{asset('backend/assets/images/apps/icon-contacts.png')}}" alt="image">
+                                    <span class="d-block mb-0">Contact</span>
                                 </a>
 
-                                <a href="#" class="dropdown-item">
-                                    <img src="{{asset('backend/assets/images/apps/icon-bitbucket.png')}}" alt="image">
-                                    <span class="d-block mb-0">Bitbucket</span>
-                                </a>
                                 <a href="#" class="dropdown-item">
                                     <img src="{{asset('backend/assets/images/apps/icon-github.png')}}" alt="image">
                                     <span class="d-block mb-0">Github</span>
-                                </a>
-
-                                <a href="#" class="dropdown-item">
-                                    <img src="{{asset('backend/assets/images/apps/icon-dribbble.png')}}" alt="image">
-                                    <span class="d-block mb-0">Dribbble</span>
-                                </a>
-
-                                <a href="#" class="dropdown-item">
-                                    <img src="{{asset('backend/assets/images/apps/icon-mail-chimp.png')}}" alt="image">
-                                    <span class="d-block mb-0">Mailchimp</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="dropdown-footer">
-                            <a href="#" class="dropdown-item">View All</a>
+                            {{-- <a href="#" class="dropdown-item">View All</a> --}}
                         </div>
                     </div>
                 </li>
@@ -284,8 +265,8 @@
 
                     <div class="dropdown-menu">
                         <div class="dropdown-header d-flex flex-column align-items-center">
-                            <div class="figure mb-3">
-                                <img src="{{asset(Auth::user()->photo)}}" class="rounded-circle" alt="image">
+                            <div class="figure mb-3" style="text-align: center;">
+                                <img src="{{asset(Auth::user()->photo)}}" class="rounded-circle" alt="image" style="width:50%;">
                             </div>
 
                             <div class="info text-center">
@@ -301,7 +282,7 @@
                                 <li class="nav-item">
                                     <a href="profile.html" class="nav-link">
                                         <i class="ri-user-line"></i> 
-                                        <span>Profile</span>
+                                        <span>Profil</span>
                                     </a>
                                 </li>
 
@@ -315,14 +296,14 @@
                                 <li class="nav-item">
                                     <a href="edit-profile.html" class="nav-link">
                                         <i class="ri-edit-box-line"></i> 
-                                        <span>Edit Profile</span>
+                                        <span>Modifier Profil</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="settings.html" class="nav-link">
+                                    <a href="{{route('parametre')}}" class="nav-link">
                                         <i class="ri-settings-5-line"></i> 
-                                        <span>Settings</span>
+                                        <span>Parametre</span>
                                     </a>
                                 </li>
                             </ul>
@@ -334,7 +315,7 @@
                                     <a href="{{route('logout')}}" class="nav-link"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="ri-login-circle-line"></i> 
-                                        <span>Logout</span>
+                                        <span>Déconnexion</span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

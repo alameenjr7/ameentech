@@ -43,5 +43,26 @@
         </div>
         <!-- dark version -->
         @include('frontend.layouts.scripts')
+        <script>
+            $(document).ready(function(){
+                var path="{{route('auto.pub.search')}}";
+                $('#search_text').autocomplete({
+                    source:function(request,response){
+                        $.ajax({
+                            url:path,
+                            dataType:"JSON",
+                            data:{
+                                term:request.term
+                            },
+                            success:function(data){
+                                console.log(data);
+                                response(data);
+                            }
+                        });
+                    },
+                    minLength:1,
+                });
+            });
+        </script>
     </body>
 </html>

@@ -29,9 +29,9 @@
 		<link rel="stylesheet" href="{{asset('backend/assets/css/responsive.css')}}">
 		
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="{{asset('backend/assets/images/favicon.png')}}">
+		<link rel="icon" type="image/png" href="{{asset(get_setting('favicon'))}}">
 		<!-- Title -->
-		<title>Dashli - Admin Dashboard Bootstrap 5 Template</title>
+		<title>AmeenTech - Confirmation Email</title>
     </head>
 
     <body class="body-bg-f5f5f5">
