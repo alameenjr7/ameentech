@@ -54,52 +54,43 @@
                 ->limit(2)
                 ->get();
             @endphp
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-2 col-sm-6">
                 <div class="single-footer-widget">
                     <h3>Posts Récents</h3>
-                    @if (count($lastPublication)>0)                   
-                        <aside class="widget-area" style="width: 80%;">
-                            <div class="widget widget_plod_posts_thumb" >
-                            @foreach ($lastPublication as $post)
-                                <article class="item">
-                                    <a href="{{route('publication.detail',$post->slug)}}" class="thumb">
-                                        <span class="fullimage cover" role="img" style="width: 60%;">
-                                            <img src="{{asset($post->photo)}}" alt="">
-                                        </span>
-                                    </a>
-
-                                    <div class="info">
-                                        <h5 class="title usmall">
-                                            <a href="{{route('publications.detail',$post->slug)}}">{{$post->title}}</a>
-                                        </h5>
-
-                                        <span><i class="ri-time-line"></i> {{$post->getCreatedAt()}}</span>
+                    @if (count($lastPublication)>0)
+                        <div class="blog-details-desc">
+                            <div class="article-comments">
+                                @foreach ($lastPublication as $post)
+                                    <div class="comments-list" style="padding-left: 60px;">
+                                        <img src="{{asset($post->photo)}}" alt="image" style="border-radius: 30%; width:50px;">
+                                        <h6 ><a href="{{route('publications.detail',$post->slug)}}">{{$post->title}}</a></h6>
+                                        <span >{{$post->getCreatedAt()}}</span>
                                     </div>
-                                </article>
-                            @endforeach
+                                @endforeach
                             </div>
-                        </aside>
+                        </div>
                     @else
                         <p class="text-left">Pas de Pubs</p>
                     @endif
                 </div>
             </div>
+            
 
-            {{-- <div class="col-lg-2 col-sm-6">
+            <div class="col-lg-2 col-sm-6">
                 <div class="single-footer-widget">
                     <h3>Services</h3>
 
                     <ul class="footer-links-list">
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="services-details.html">Digital Marketing</a></li>
-                        <li><a href="purchase-guide.html">Purchase Guide</a></li>
-                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Programme d’affiliation</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Conditions Générales</a></li>
+                        {{-- <li><a href="contact.html">Support</a></li>
                         <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="services-details.html">Cloud Computing</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li> --}}
                     </ul>
                 </div>
-            </div> --}}
+            </div>
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
