@@ -63,23 +63,24 @@
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784" crossorigin="anonymous"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
+        {{-- <ins class="adsbygoogle"
                 style="display:block; text-align:center;"
                 data-ad-layout="in-article"
                 data-ad-format="fluid"
                 data-ad-client="ca-pub-3183523459637784"
-                data-ad-slot="7549265885"></ins>
+                data-ad-slot="7549265885" >
+        </ins> --}}
         <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137366207-1"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-137366207-1');
+            gtag('config', 'UA-137366207-1');
         </script>
 
         @yield('scripts')
