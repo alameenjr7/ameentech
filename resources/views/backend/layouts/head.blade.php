@@ -40,5 +40,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 		<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 
+		<meta name="google-site-verification" content="FhzHYoTqi3NGJlk30bFOlMkq8-tUBk5MzouXIKi6rk0" />
 		<!-- Title -->
 		<title>AmeenTech - Admin Dashboard</title>
