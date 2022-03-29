@@ -18,8 +18,8 @@ class SettingTableSeeder extends Seeder
         //
         DB::table('settings')->insert([
             'title' => 'AmeenTECH',
-            'meta_description' => 'L\'informatique à votre portée.',
-            'meta_keywords' => 'Les résultats ...',
+            'meta_description' => 'Création site Web, Applications, Logiciels',
+            'meta_keywords' => 'Création site internet, développement d\'applications, logiciels - AmeenTECH',
             'logo' => '',
             'logo2' => '',
             'favicon' => '',
