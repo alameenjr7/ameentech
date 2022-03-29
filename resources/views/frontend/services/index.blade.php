@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+@section('title')
+    <title>Création Applications web/mobile - AmeenTECH</title>
+@endsection
+
 @section('content')
 
 <!-- Start Page Banner Area -->

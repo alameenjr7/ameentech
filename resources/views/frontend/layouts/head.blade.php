@@ -5,8 +5,6 @@
         <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'AmeenTech - Startups') }}</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
@@ -45,4 +43,5 @@
     <meta name="google-site-verification" content="FhzHYoTqi3NGJlk30bFOlMkq8-tUBk5MzouXIKi6rk0" />
     
 
-
+    {{-- <title>{{ config('app.name', 'AmeenTech - Startups') }}</title> --}}
+    @yield('title')

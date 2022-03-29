@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+@section('title')
+    <title>Contactez un Développeurs web/mobile - AmeenTECH</title>
+@endsection
+
 @section('content')
 
 

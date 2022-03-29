@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+@section('title')
+    <title>Actualité et Tutoriel Technique: Détail - AmeenTECH</title>
+@endsection
+
 @section('content')
 
         
