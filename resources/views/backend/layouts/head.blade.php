@@ -5,7 +5,7 @@
 		<!-- CSRF Token -->
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<title>{{ config('app.name', 'AmeenTech') }}</title>
+		{{-- <title>{{ config('app.name', 'AmeenTech') }}</title> --}}
 
 		<!-- Bootstrap Min CSS --> 
 		<link rel="stylesheet" href="{{asset('backend/assets/css/bootstrap.min.css')}}">
@@ -42,4 +42,8 @@
 
 		<meta name="google-site-verification" content="FhzHYoTqi3NGJlk30bFOlMkq8-tUBk5MzouXIKi6rk0" />
 		<!-- Title -->
+		<meta name="description" content="{{get_setting('meta_description')}}">
+		<meta name="keywords" content="{{get_setting('meta_keywords')}}">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 		<title>AmeenTech - Admin Dashboard</title>
