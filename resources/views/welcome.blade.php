@@ -76,7 +76,7 @@
             <div class="partner-slides owl-carousel owl-theme">
                 @foreach ($languages as $language)
                     <div class="single-partner">
-                        <a href="{{$language->url}}"><img src="{{asset($language->photo)}}" alt="image" style="max-height: 50px;"></a>
+                        <a href="{{$language->url}}"><img src="{{asset($language->photo)}}" alt="image"></a>
                     </div>
                 @endforeach
             </div>
