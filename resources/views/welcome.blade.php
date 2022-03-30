@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-    <title>{{get_setting('title')}}: Création site Web, Applications, Logiciels</title>
+    <title>{{get_setting('title')}} - Création site Web, Applications, Logiciels</title>
 @endsection
 
 @section('content')
