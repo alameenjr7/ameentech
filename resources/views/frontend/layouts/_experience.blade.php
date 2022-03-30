@@ -5,7 +5,7 @@
                 <div class="experiences-item">
                     <div class="experiences-content">
                         <div class="tag">
-                            <img src="{{asset('frontend/assets/images/experiences/tag-icon.png')}}" alt="image">
+                            <img src="{{asset(get_setting('logo'))}}" alt="image">
                         </div>
                         @php
                             $date1 = new DateTime('2018-01-01');
