@@ -83,7 +83,9 @@
                                 <span>{{App\Models\Language::where('id',$language->framework_id)->value('title')}}</span>
                             </td>
                             <td class="rating">
-                                <span>{{$language->description}}</span>
+                                <span>
+                                    <p>{{Str::of($language->description)->limit(20, ' >>>')}}</p>
+                                </span>
                             </td>
                             <td class="rating">
                                 <span>{{$language->status}}</span>
