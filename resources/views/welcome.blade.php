@@ -23,7 +23,7 @@
                     <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">{{$banner->description}}</p>
 
                     <div class="banner-btn">
-                        <a href="about-1.html" class="default-btn wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">Voir Plus <i class="ri-arrow-right-line"></i><span></span></a>
+                        <a href="{{route('apropos')}}" class="default-btn wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">Voir Plus <i class="ri-arrow-right-line"></i><span></span></a>
                     </div>
                 </div>
             </div>
