@@ -291,7 +291,7 @@
                                 </div>
 
                                 <div class="option-item">
-                                    <a href="#" class="default-btn">J'ai un Projet! <i class="ri-message-line"></i><span></span></a>
+                                    <a href="#" class="default-btn" data-bs-toggle="modal" data-bs-target="#project-modal">J'ai un Projet! <i class="ri-message-line"></i><span></span></a>
                                 </div>
 
                                 <div class="option-item">
@@ -351,6 +351,7 @@
         </div>
         <!-- End Navbar Area -->
 
+       
         <!-- Sidebar Modal -->
 <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -397,4 +398,5 @@
         </div>
     </div>
 </div>
+@include('_modal')
 <!-- End Sidebar Modal -->

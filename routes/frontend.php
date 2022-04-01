@@ -33,4 +33,7 @@ Route::post('/mail-contact',[App\Http\Controllers\Frontend\ContactController::cl
 Route::get('/service',[App\Http\Controllers\Frontend\ServiceController::class,'index'])->name('service');
 
 
-Route::post('/question-response',[App\Http\Controllers\QuestionController::class,'questionSubmit'])->name('submit.question');
+Route::post('/question-response',[App\Http\Controllers\Frontend\QuestionController::class,'questionSubmit'])->name('submit.question');
+
+Route::post('/projet-response',[App\Http\Controllers\Frontend\ProjectController::class,'projectSubmit'])->name('submit.project');
+
