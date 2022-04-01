@@ -226,7 +226,7 @@
                     @foreach ($questions as $question)
                     <div class="accordion">
                         <div class="accordion-item">
-                            <div class="accordion-title active">
+                            <div class="accordion-title">
                                 <i class="ri-add-line"></i>
                                 {{$question->question}}
                             </div>
