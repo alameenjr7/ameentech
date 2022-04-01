@@ -68,7 +68,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
                                             <label>Exprimer votre besoin <span class="text-danger">*</span></label>
-                                            <textarea name="besoin_client" class="form-control" id="message" cols="30" rows="5" required data-error="Remplisser ce champ" placeholder="Rédigez votre besoin...">{{old('besoin_client')}}</textarea>
+                                            <textarea name="besoin_client" class="form-control" id="message" cols="30" rows="8" required data-error="Remplisser ce champ" placeholder="Rédigez votre besoin...">{{old('besoin_client')}}</textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
