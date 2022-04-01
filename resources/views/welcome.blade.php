@@ -8,10 +8,9 @@
 
 <!-- Start Main Banner Area -->
 
-@if (count($banners)>0)
+{{-- @if (count($banners)>0) --}}
 <div class="main-banner-area">
     <div class="container">
-        @foreach ($banners as $banner)
         <div class="row">
             <div class="col-lg-5 col-md-12">
                 <div class="main-banner-content">
@@ -19,8 +18,14 @@
                         <img src="{{asset(get_setting('logo'))}}" alt="image">
                         # AmeenTech Meilleure Entreprise Informatique.
                     </div>
-                    <h1 class="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1000ms">{{$banner->title}}</h1>
-                    <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">{{$banner->description}}</p>
+                    
+                    <h6 style="margin-top: 25px;">Votre</h6>
+                    <h1 class="wow fadeInLeft" style="margin-top: 4px;" data-wow-delay="00ms" data-wow-duration="1000ms"> 
+                        {{-- @foreach ($banners as $banner)
+                            <span class="wow fadeInLeft" id="#slider1" data-wow-delay="00ms" data-wow-duration="1000ms">{{$banner->title}}</span>
+                        @endforeach --}}
+                    </h1>
+                    <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">Assurer le meilleur retour sur investissement pour votre entreprise avec AmeenTECH.</p>
 
                     <div class="banner-btn">
                         <a href="{{route('apropos')}}" class="default-btn wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">Voir Plus <i class="ri-arrow-right-line"></i><span></span></a>
@@ -49,7 +54,6 @@
                 </div>
             </div>
         </div>
-        @endforeach
     </div>
 
     <div class="main-banner-shape-1">
@@ -65,7 +69,7 @@
         <img src="{{asset('frontend/assets/images/main-banner/banner-one/shape-4.png')}}" alt="image">
     </div>
 </div>
-@endif
+{{-- @endif --}}
 <!-- End Main Banner Area -->
 
 <!-- Start Partner Area -->
@@ -534,4 +538,43 @@
     </div>
 </div>
 <!-- End Overview Area -->
+@endsection
+
+@section('scripts')
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script>
+    
+    var textAnim = document.querySelector('h1');
+
+    var typewriter = new Typewriter(textAnim,{
+        // loop: true,
+        deleteSpeed: 20
+    });
+
+    typewriter
+    .changeDelay(20)
+    .typeString('Partenaire pour la création:')
+    .pauseFor(300)
+    .pause(1000)
+    .typeString('<span style="color: #27ae60;"> Site Web</span> !')
+    .pauseFor(1000)
+    .deleteChars(10)
+    .typeString('<span style="color: midnightblue;"> Application web</span> !')
+    .pauseFor(1000)
+    .deleteChars(5)
+    .typeString('<span style="color: midnightblue;"> mobile</span> !')
+    .pauseFor(1000)
+    .deleteChars(21)
+    .typeString('<span style="color: #ea30ff;"> Logiciel</span> !')
+    .pauseFor(1000)
+    .deleteChars(10)
+    .typeString('<span style="color: #ff6910;"> Application métier</span> !')
+    .pauseFor(1000)
+    .deleteChars(20)
+    .typeString('<span style="color: #ea30ff;"> Base de Données</span> !')
+    .pauseFor(1000)
+    // .deleteChars(17)
+    .start()
+</script>
+
 @endsection

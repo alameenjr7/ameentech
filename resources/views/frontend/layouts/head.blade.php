@@ -49,3 +49,5 @@
 
     {{-- <title>{{ config('app.name', 'AmeenTech - Startups') }}</title> --}}
     @yield('title')
+
+    @yield('styles')
