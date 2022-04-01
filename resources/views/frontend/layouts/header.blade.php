@@ -398,5 +398,6 @@
         </div>
     </div>
 </div>
+
 @include('_modal')
 <!-- End Sidebar Modal -->

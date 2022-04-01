@@ -1,19 +1,20 @@
 <div id="project-modal" class="modal fade project-modal" tabindex="-1" aria-labelledby="modalDemandeDevisLabel" style=" display: ;" aria-modal="true" role="dialog">
-    <div class="modal-dialog modal-lg py-5">
+    <div class="modal-dialog modal-lg py-5" role="document">
 
-      <div class="modal-content modal-devis-crm">
+      <div class="modal-content">
         
         <div class="modal-header" style="background-color: #0064FB">
           <h5 style="color: #ffffff; text-align:center; margin-left:50px;">
             Vous avez un projet, une idée à concrétiser ? Faites-le-nous savoir!
           </h5>
         </div>
-        <div class="modal-body">
-  
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-lg-12 col-md-12">
+        <div class="modal-body" style="padding:0;">
+  
+            {{-- <div class="container"> --}}
+                {{-- <div class="row"> --}}
+
+                    {{-- <div class="col-lg-12 col-md-12"> --}}
                         <div class="register-form" style="max-width: 800px;">
                             <form action="{{route('submit.project')}}" method="POST">
                                 @csrf
@@ -80,9 +81,9 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    {{-- </div> --}}
+                {{-- </div> --}}
+            {{-- </div> --}}
           
         </div>
       </div>
