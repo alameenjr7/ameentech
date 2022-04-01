@@ -16,7 +16,7 @@
             <div class="col-lg-5 col-md-12">
                 <div class="main-banner-content">
                     <div class="tag wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                        <img src="{{asset('frontend/assets/images/main-banner/banner-one/tag-icon.png')}}" alt="image">
+                        <img src="{{asset(get_setting('logo'))}}" alt="image">
                         # AmeenTech Meilleure Entreprise Informatique.
                     </div>
                     <h1 class="wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1000ms">{{$banner->title}}</h1>
