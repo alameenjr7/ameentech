@@ -20,11 +20,7 @@
                     </div>
                     
                     <h6 style="margin-top: 25px;">Votre</h6>
-                    <h1 class="wow fadeInLeft" style="margin-top: 4px;" data-wow-delay="00ms" data-wow-duration="1000ms"> 
-                        {{-- @foreach ($banners as $banner)
-                            <span class="wow fadeInLeft" id="#slider1" data-wow-delay="00ms" data-wow-duration="1000ms">{{$banner->title}}</span>
-                        @endforeach --}}
-                    </h1>
+                    <h1 class="wow fadeInLeft" style="margin-top: 4px;" data-wow-delay="00ms" data-wow-duration="1000ms"> </h1>
                     <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">Assurer le meilleur retour sur investissement pour votre entreprise avec AmeenTECH.</p>
 
                     <div class="banner-btn">
