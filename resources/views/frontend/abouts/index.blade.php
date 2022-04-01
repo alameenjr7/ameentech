@@ -231,7 +231,7 @@
                                 {{$question->question}}
                             </div>
                             
-                            <div class="accordion-content show">
+                            <div class="accordion-content">
                                 <p>{{$question->response}}</p>
                             </div>
                         </div>
