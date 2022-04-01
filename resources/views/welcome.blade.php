@@ -562,7 +562,7 @@
     .typeString('<span style="color: midnightblue;"> Application web</span> !')
     .pauseFor(1000)
     .deleteChars(5)
-    .typeString('<span style="color: midnightblue;"> mobile</span> !')
+    .typeString('<span style="color: midnightblue;"> mobile</span>!')
     .pauseFor(1000)
     .deleteChars(21)
     .typeString('<span style="color: #ea30ff;"> Logiciel</span> !')
