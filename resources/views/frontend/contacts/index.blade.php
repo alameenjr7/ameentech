@@ -15,7 +15,7 @@
 
             <ul>
                 <li>
-                    <a href="{{route('acceuil')}}">Acceuil</a>
+                    <a href="{{route('accueil')}}">Accueil</a>
                 </li>
                 <li>Contact</li>
             </ul>

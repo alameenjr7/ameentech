@@ -6,7 +6,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
                     <div class="widget-logo">
-                        <a href="{{route('acceuil')}}">
+                        <a href="{{route('accueil')}}">
                             <img src="{{asset(get_setting('logo2'))}}" class="black-logo" alt="logo">
                             <img src="{{asset(get_setting('logo2'))}}" class="white-logo" alt="logo">
                         </a>
@@ -37,7 +37,7 @@
                     <h3>Lien Rapide</h3>
 
                     <ul class="footer-links-list">
-                        <li><a href="{{route('acceuil')}}">Acceuil</a></li>
+                        <li><a href="{{route('accueil')}}">Accueil</a></li>
                         <li><a href="{{route('service')}}">Services</a></li>
                         <li><a href="{{route('contact')}}">Contacts</a></li>
                         <li><a href="{{route('publication')}}">Publications</a></li>

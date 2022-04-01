@@ -24,8 +24,8 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="{{route('acceuil')}}" class="nav-link active">
-                                        Acceuil
+                                    <a href="{{route('accueil')}}" class="nav-link active">
+                                        Accueil
                                         <i class="ri-add-line"></i>
                                     </a>
 {{-- 
@@ -360,7 +360,7 @@
 
             <div class="modal-body">
                 <div class="title">
-                    <a href="{{route('acceuil')}}">
+                    <a href="{{route('accueil')}}">
                         <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
                         <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
                     </a>

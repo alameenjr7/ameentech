@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/',[App\Http\Controllers\Frontend\IndexController::class,'index'])->name('acceuil');
+Route::get('/',[App\Http\Controllers\Frontend\IndexController::class,'index'])->name('accueil');
 
 Route::get('/apropos',[App\Http\Controllers\Frontend\AproposController::class,'index'])->name('apropos');
 
