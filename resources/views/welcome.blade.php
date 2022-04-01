@@ -547,7 +547,7 @@
     var textAnim = document.querySelector('h1');
 
     var typewriter = new Typewriter(textAnim,{
-        // loop: true,
+        loop: true,
         deleteSpeed: 20
     });
 
@@ -559,7 +559,7 @@
     .typeString('<span style="color: #27ae60;"> Site Web</span> !')
     .pauseFor(1000)
     .deleteChars(10)
-    .typeString('<span style="color: midnightblue;"> Application web</span> !')
+    .typeString('<span style="color: #0064FB;"> Application web</span> !')
     .pauseFor(1000)
     .deleteChars(5)
     .typeString('<span style="color: midnightblue;"> mobile</span>!')
