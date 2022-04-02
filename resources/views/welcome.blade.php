@@ -569,7 +569,7 @@
     .deleteChars(17)
     .typeString('<span style="color: #dc3545;"> Logo</span> !')
     .pauseFor(1000)
-    .deleteChars(17)
+    .deleteChars(5)
     .typeString('<span style="color: #ff6910;"> Application métier</span> !')
     .pauseFor(1000)
     // .deleteChars(20)
