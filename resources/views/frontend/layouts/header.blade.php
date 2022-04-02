@@ -335,7 +335,7 @@
                                 </div>
 
                                 <div class="option-item">
-                                    <a href="{{route('contact')}}" class="default-btn">Parlons Maintenant! <i class="ri-message-line"></i><span></span></a>
+                                    <a href="#" class="default-btn" data-bs-toggle="modal" data-bs-target="#project-modal">J'ai un Projet! <i class="ri-message-line"></i><span></span></a>
                                 </div>
 
                                 <div class="option-item">
