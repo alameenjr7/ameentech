@@ -543,7 +543,7 @@
     var textAnim = document.querySelector('h1');
 
     var typewriter = new Typewriter(textAnim,{
-        loop: true,
+        // loop: true,
         deleteSpeed: 20
     });
 
@@ -564,15 +564,15 @@
     .typeString('<span style="color: #ea30ff;"> Logiciel</span> !')
     .pauseFor(1000)
     .deleteChars(10)
-    .typeString('<span style="color: #ff6910;"> Application métier</span> !')
-    .pauseFor(1000)
-    .deleteChars(20)
     .typeString('<span style="color: #7f26c6;"> Base de Données</span> !')
     .pauseFor(1000)
     .deleteChars(17)
     .typeString('<span style="color: #dc3545;"> Logo</span> !')
     .pauseFor(1000)
-    // .deleteChars(17)
+    .deleteChars(17)
+    .typeString('<span style="color: #ff6910;"> Application métier</span> !')
+    .pauseFor(1000)
+    // .deleteChars(20)
     .start()
 </script>
 
