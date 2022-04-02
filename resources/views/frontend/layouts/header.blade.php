@@ -4,7 +4,7 @@
                 <div class="container">
                     <div class="main-responsive-menu">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{route('accueil')}}">
                                 <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
                             <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
                             </a>
@@ -16,7 +16,7 @@
             <div class="main-navbar">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{{route('accueil')}}">
                             <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
                             <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
                         </a>
@@ -28,10 +28,10 @@
                                         Accueil
                                         <i class="ri-add-line"></i>
                                     </a>
-{{-- 
+                                    {{-- 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="index.html" class="nav-link active">Home Demo - 1</a>
+                                            <a href="{{route('accueil')}}" class="nav-link active">Home Demo - 1</a>
                                         </li>
 
                                         <li class="nav-item">
@@ -350,54 +350,53 @@
             </div>
         </div>
         <!-- End Navbar Area -->
-
        
         <!-- Sidebar Modal -->
-<div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+        <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
 
-            <div class="modal-body">
-                <div class="title">
-                    <a href="{{route('accueil')}}">
-                        <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
-                        <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
-                    </a>
-                </div>
+                    <div class="modal-body">
+                        <div class="title">
+                            <a href="{{route('accueil')}}">
+                                <img src="{{asset(get_setting('favicon'))}}" class="black-logo" alt="logo">
+                                <img src="{{asset(get_setting('favicon'))}}" class="white-logo" alt="logo">
+                            </a>
+                        </div>
 
-                <div class="sidebar-content">
-                    <h3>A Propos de Nous!</h3>
-                    <p>{{get_setting('background_footer')}}</p>
+                        <div class="sidebar-content">
+                            <h3>A Propos de Nous!</h3>
+                            <p>{{get_setting('background_footer')}}</p>
 
-                    <div class="sidebar-btn">
-                        <a href="{{route('contact')}}" class="default-btn">Parlons Maintenant! <i class="ri-message-line"></i><span></span></a>
+                            <div class="sidebar-btn">
+                                <a href="{{route('contact')}}" class="default-btn">Parlons Maintenant! <i class="ri-message-line"></i><span></span></a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-contact-info">
+                            <h3>Coordonnées</h3>
+
+                            <ul class="info-list">
+                                <li><i class="ri-phone-fill"></i> <a href="tel:+11234567890">{{get_setting('telephone1')}}</a></li>
+
+                                <li><i class="ri-mail-line"></i> <a href="mailto:{{get_setting('email_1')}}"><span class="__cf_email__" data-cfemail="c0a8a5acacaf80b0acafa4eea3afad">{{get_setting('email_1')}}</span></a></li>
+
+                                <li><i class="ri-map-pin-line"></i> {{get_setting('adresse')}}, {{get_setting('lot')}}, <br>{{get_setting('appartement')}}</li>
+                            </ul>
+                        </div>
+
+                        <ul class="sidebar-social-list">
+                            <li><a href="{{get_setting('facebook_url')}}" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                            <li><a href="{{get_setting('twitter_url')}}" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                            <li><a href="{{get_setting('linkedin_url')}}" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                            <li><a href="{{get_setting('instagram_url')}}" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                            <li><a href="{{get_setting('youtube_url')}}" target="_blank"><i class="ri-youtube-fill"></i></a></li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="sidebar-contact-info">
-                    <h3>Coordonnées</h3>
-
-                    <ul class="info-list">
-                        <li><i class="ri-phone-fill"></i> <a href="tel:+11234567890">{{get_setting('telephone1')}}</a></li>
-
-                        <li><i class="ri-mail-line"></i> <a href="mailto:{{get_setting('email_1')}}"><span class="__cf_email__" data-cfemail="c0a8a5acacaf80b0acafa4eea3afad">{{get_setting('email_1')}}</span></a></li>
-
-                        <li><i class="ri-map-pin-line"></i> {{get_setting('adresse')}}, {{get_setting('lot')}}, <br>{{get_setting('appartement')}}</li>
-                    </ul>
-                </div>
-
-                <ul class="sidebar-social-list">
-                    <li><a href="{{get_setting('facebook_url')}}" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                    <li><a href="{{get_setting('twitter_url')}}" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                    <li><a href="{{get_setting('linkedin_url')}}" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                    <li><a href="{{get_setting('instagram_url')}}" target="_blank"><i class="ri-instagram-fill"></i></a></li>
-                    <li><a href="{{get_setting('youtube_url')}}" target="_blank"><i class="ri-youtube-fill"></i></a></li>
-                </ul>
             </div>
         </div>
-    </div>
-</div>
 
-@include('_modal')
-<!-- End Sidebar Modal -->
+        @include('_modal')
+        <!-- End Sidebar Modal -->
