@@ -18,7 +18,7 @@
                         <img src="{{asset(get_setting('logo'))}}" alt="image">
                         # AmeenTech Meilleure Entreprise Informatique.
                     </div>
-                    
+
                     <h6 style="margin-top: 25px;">Votre</h6>
                     <h1 class="wow fadeInLeft" style="margin-top: 4px;" data-wow-delay="00ms" data-wow-duration="1000ms"> </h1>
                     <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">Assurer le meilleur retour sur investissement pour votre entreprise avec AmeenTECH.</p>
@@ -68,6 +68,18 @@
 {{-- @endif --}}
 <!-- End Main Banner Area -->
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
+    crossorigin="anonymous"></script>
+    <!-- AL AMEEN -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-3183523459637784"
+    data-ad-slot="6790306307"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <!-- Start Partner Area -->
 @if (count($languages)>0)
 <div class="partner-area">
@@ -539,7 +551,7 @@
 @section('scripts')
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script>
-    
+
     var textAnim = document.querySelector('h1');
 
     var typewriter = new Typewriter(textAnim,{
