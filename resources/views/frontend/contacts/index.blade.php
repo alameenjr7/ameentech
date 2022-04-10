@@ -164,5 +164,16 @@
     </div>
 </div>
 <!-- End Contact Info Area -->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
+    crossorigin="anonymous"></script>
+    <!-- AL AMEEN -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-3183523459637784"
+    data-ad-slot="6790306307"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 @endsection

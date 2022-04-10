@@ -57,7 +57,7 @@
                                             <div class="blog-content">
                                                 @php
                                                     $comments = App\Models\PublicationReview::where('publication_id',$publication->id)->count();
-                                                    
+
                                                     $cat = App\Models\Category::where('id',$publication->cat_id)->get()->first();
                                                 @endphp
                                                 <ul class="entry-meta">
@@ -100,11 +100,11 @@
                         @if (count($languages)>0)
                             @include('frontend.blogs._lang_post')
                         @endif
-                        
+
                         @if (count($lastPublications)>0)
                             <div class="widget widget_plod_posts_thumb">
                                 <h3 class="widget-title">Dernières Publications</h3>
-                                
+
                                 @include('frontend.blogs._last_post')
                             </div>
                         @endif
@@ -139,6 +139,18 @@
         <img src="{{asset('frontend/assets/images/blog/shape-2.png')}}" alt="image">
     </div>
 </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
+    crossorigin="anonymous"></script>
+    <!-- AL AMEEN -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-3183523459637784"
+    data-ad-slot="6790306307"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <!-- End Blog Area -->
 
 @endsection
