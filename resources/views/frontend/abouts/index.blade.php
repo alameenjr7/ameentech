@@ -68,7 +68,18 @@
 </div>
 @endif
 <!-- End Features Area -->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
+    crossorigin="anonymous"></script>
+    <!-- AL AMEEN -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-3183523459637784"
+    data-ad-slot="6790306307"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <!-- Start About Area -->
 @include('frontend.layouts._experience')
 <!-- End About Area -->
@@ -213,7 +224,7 @@
             <h2>Questions fréquemment posées</h2>
             <p>Voici une liste de réponses aux questions les plus posées!</p>
         </div>
-        
+
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-12">
                 <div class="faq-image">
@@ -230,7 +241,7 @@
                                 <i class="ri-add-line"></i>
                                 {{$question->question}}
                             </div>
-                            
+
                             <div class="accordion-content">
                                 <p>{{$question->response}}</p>
                             </div>
