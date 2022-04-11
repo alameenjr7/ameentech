@@ -92,7 +92,11 @@
 </div>
 @endif
 <!-- End Partner Area -->
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB5T3ZK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+    <!-- End Google Tag Manager (noscript) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
     crossorigin="anonymous"></script>
     <!-- AL AMEEN -->

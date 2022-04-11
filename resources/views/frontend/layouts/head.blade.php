@@ -5,7 +5,7 @@
     <meta name="description" content="{{get_setting('meta_description')}}">
     <meta name="keywords" content="{{get_setting('meta_keywords')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
         <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -45,7 +45,15 @@
     {{-- <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"> --}}
 
     <meta name="google-site-verification" content="FhzHYoTqi3NGJlk30bFOlMkq8-tUBk5MzouXIKi6rk0" />
-    
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MB5T3ZK');
+    </script>
+    <!-- End Google Tag Manager -->
 
     {{-- <title>{{ config('app.name', 'AmeenTech - Startups') }}</title> --}}
     @yield('title')
