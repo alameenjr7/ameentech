@@ -92,5 +92,7 @@
         gtag('config', 'UA-137366207-1');
         </script>
 
+        <script src="https://www.googleoptimize.com/optimize.js?id=GTM-WZ5X6N5"></script>
+
 
         @yield('scripts')
