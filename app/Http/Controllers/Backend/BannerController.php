@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class BannerController extends Controller
@@ -24,12 +23,12 @@ class BannerController extends Controller
 
     public function bannerStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('banners')->where('id', $request->id)->update(['status'=>'active']);
+            Banner::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'Bannière activée avec succès', 'status'=>true]);
         }
         else{
-            DB::table('banners')->where('id', $request->id)->update(['status'=>'inactive']);
+            Banner::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'Bannière désactivée avec succès', 'status'=>true]);
         }

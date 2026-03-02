@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Language;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class LanguageController extends Controller
@@ -25,12 +24,12 @@ class LanguageController extends Controller
 
     public function langageStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('languages')->where('id', $request->id)->update(['status'=>'active']);
+            Language::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'Langage activée avec succès', 'status'=>true]);
         }
         else{
-            DB::table('languages')->where('id', $request->id)->update(['status'=>'inactive']);
+            Language::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'Langage désactivée avec succès', 'status'=>true]);
         }

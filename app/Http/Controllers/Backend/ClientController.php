@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
@@ -23,12 +22,12 @@ class ClientController extends Controller
 
     public function clientStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('clients')->where('id', $request->id)->update(['status'=>'active']);
+            Client::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'Client activé avec succès', 'status'=>true]);
         }
         else{
-            DB::table('clients')->where('id', $request->id)->update(['status'=>'inactive']);
+            Client::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'Client désactivé avec succès', 'status'=>true]);
         }

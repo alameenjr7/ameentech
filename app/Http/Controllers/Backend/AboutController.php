@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class AboutController extends Controller
 {
@@ -24,12 +23,12 @@ class AboutController extends Controller
 
     public function aboutStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('abouts')->where('id', $request->id)->update(['status'=>'active']);
+            About::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'A Propos activée avec succès', 'status'=>true]);
         }
         else{
-            DB::table('abouts')->where('id', $request->id)->update(['status'=>'inactive']);
+            About::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'A Propos désactivée avec succès', 'status'=>true]);
         }

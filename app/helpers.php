@@ -12,7 +12,6 @@ if(!function_exists('get_setting'))
 
 if (! function_exists('short_string')) {
     function short_string($str) {
-            $rest = substr($str, 0, 10);
-            return $rest;
+        return substr($str, 0, 10);
     }
 }

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class ServiceController extends Controller
@@ -24,12 +23,12 @@ class ServiceController extends Controller
 
     public function servicestatus(Request $request){
         if($request->_this =='true'){
-            DB::table('services')->where('id', $request->id)->update(['status'=>'active']);
+            Service::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'Service activée avec succès', 'status'=>true]);
         }
         else{
-            DB::table('services')->where('id', $request->id)->update(['status'=>'inactive']);
+            Service::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'Service désactivée avec succès', 'status'=>true]);
         }

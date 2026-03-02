@@ -11,7 +11,7 @@ class RealisationController extends Controller
     //
     public function index()
     {
-        $realisations = Realisation::where('status','active')->where(['condition'=>'terminer,en_cours'])->paginate(6);
+        $realisations = Realisation::where('status','active')->whereIn('condition',['terminer','en_cours'])->paginate(6);
 
         return view('frontend.cas.index',compact(
             'realisations'

@@ -7,7 +7,6 @@ use App\Models\Category;
 use App\Models\Language;
 use App\Models\Realisation;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class RealisationController extends Controller
@@ -26,12 +25,12 @@ class RealisationController extends Controller
 
     public function realisationStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('realisations')->where('id', $request->id)->update(['status'=>'active']);
+            Realisation::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'Réalisation activée avec succès', 'status'=>true]);
         }
         else{
-            DB::table('realisations')->where('id', $request->id)->update(['status'=>'inactive']);
+            Realisation::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'Réalisation désactivée avec succès', 'status'=>true]);
         }

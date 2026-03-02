@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\RealisationReview;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class RealisationReviewController extends Controller
 {
@@ -18,13 +17,13 @@ class RealisationReviewController extends Controller
 
     public function reaReviewStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('realisation_reviews')->where('id', $request->id)->update(['status'=>'active']);
-            
+            RealisationReview::where('id', $request->id)->update(['status'=>'active']);
+
             return response()->json(['msg'=> 'Commentaire activer avec succes', 'status'=>true]);
         }
         else{
-            DB::table('realisation_reviews')->where('id', $request->id)->update(['status'=>'inactive']);
-            
+            RealisationReview::where('id', $request->id)->update(['status'=>'inactive']);
+
             return response()->json(['msg'=> 'Commentaire desactiver avec succes', 'status'=>true]);
         }
     }

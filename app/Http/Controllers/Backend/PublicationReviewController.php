@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\PublicationReview;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class PublicationReviewController extends Controller
 {
@@ -18,13 +17,13 @@ class PublicationReviewController extends Controller
 
     public function pubReviewStatus(Request $request){
         if($request->_this =='true'){
-            DB::table('publication_reviews')->where('id', $request->id)->update(['status'=>'active']);
-            
+            PublicationReview::where('id', $request->id)->update(['status'=>'active']);
+
             return response()->json(['msg'=> 'Commentaire activer avec succes', 'status'=>true]);
         }
         else{
-            DB::table('publication_reviews')->where('id', $request->id)->update(['status'=>'inactive']);
-            
+            PublicationReview::where('id', $request->id)->update(['status'=>'inactive']);
+
             return response()->json(['msg'=> 'Commentaire desactiver avec succes', 'status'=>true]);
         }
     }

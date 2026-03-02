@@ -11,29 +11,26 @@ use Illuminate\Http\Request;
 class PublicationController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        $publications = Publication::query();
+        $publications = Publication::where(['status'=>'active','conditions'=>'publier']);
 
         // Filtrer par categorie
-        if(!empty($_GET['category']))
+        if($request->filled('category'))
         {
-            $slug = explode(',',$_GET['category']);
-            $cat_ids = Category::select('id')->whereIn('slug',$slug)->pluck('id')->toArray();
+            $catSlugs = explode(',', $request->input('category'));
+            $cat_ids = Category::select('id')->whereIn('slug',$catSlugs)->pluck('id')->toArray();
             $publications = $publications->whereIn('cat_id',$cat_ids);
         }
 
-        if(!empty($_GET['language']))
+        if($request->filled('language'))
         {
-            $slug = explode(',',$_GET['language']);
-            $lang_ids = Language::select('id')->whereIn('slug',$slug)->pluck('id')->toArray();
+            $langSlugs = explode(',', $request->input('language'));
+            $lang_ids = Language::select('id')->whereIn('slug',$langSlugs)->pluck('id')->toArray();
             $publications = $publications->whereIn('language_id',$lang_ids);
         }
 
-        else
-        {
-            $publications = $publications->where(['status'=>'active','conditions'=>'publier'])->paginate(8);
-        }
+        $publications = $publications->paginate(8);
 
         $languages = Language::where(['status'=>'active','is_language'=>1])->orderBy('title','ASC')->with('publications')->get();
         $cats = Category::where(['status'=>'active','is_parent'=>1])->with('publications')->orderBy('title','ASC')->get();
@@ -44,7 +41,12 @@ class PublicationController extends Controller
 
     public function publicationDetail($slug)
     {
-        $publications = Publication::query();
+        $publications = Publication::with('rel_pubs')->where('slug',$slug)->first();
+
+        if(!$publications) {
+            return view('errors.404');
+        }
+
         $lastPublications = Publication::where(['status'=>'active','conditions'=>'publier'])
         ->orderBy('id','DESC')
         ->limit(4)
@@ -52,29 +54,7 @@ class PublicationController extends Controller
         $categories = Category::where(['status'=>'active','is_parent'=>1])->with('publications')->orderBy('title','ASC')->get();
         $languages = Language::where(['status'=>'active','is_language'=>1])->orderBy('title','ASC')->with('publications')->get();
 
-        if(!empty($_GET['category']))
-        {
-            $slug = explode(',',$_GET['category']);
-            $cat_ids = Category::select('id')->whereIn('slug',$slug)->pluck('id')->toArray();
-            $publications = $publications->whereIn('cat_id',$cat_ids);
-        }
-
-        if(!empty($_GET['language']))
-        {
-            $slug = explode(',',$_GET['language']);
-            $lang_ids = Language::select('id')->whereIn('slug',$slug)->pluck('id')->toArray();
-            $publications = $publications->whereIn('language_id',$lang_ids);
-        }
-        else{
-            $publications = Publication::with('rel_pubs')->where('slug',$slug)->first();
-        }
-
-        if($publications) {
-            return view('frontend.blogs.blog-detail',compact(['publications','lastPublications','categories','languages']));
-        }
-        else {
-            return view('errors.404');
-        }
+        return view('frontend.blogs.blog-detail',compact(['publications','lastPublications','categories','languages']));
     }
 
     public function publicationFilter(Request $request)
@@ -123,7 +103,7 @@ class PublicationController extends Controller
     {
         $query = $request->get('term','');
 
-        $publications = Publication::where('title','LIKE','%'.$query.'%')->get();
+        $publications = Publication::where('title','LIKE','%'.$query.'%')->limit(10)->get();
 
         $data = array();
         foreach($publications as $publication)

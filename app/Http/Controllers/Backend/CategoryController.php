@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
@@ -23,14 +22,14 @@ class CategoryController extends Controller
 
     public function categoriestatus(Request $request){
         if($request->_this=='true'){
-            DB::table('categories')->where('id', $request->id)->update(['status'=>'active']);
+            Category::where('id', $request->id)->update(['status'=>'active']);
 
             return response()->json(['msg'=> 'Catégorie activée avec succès', 'status'=>true]);
 
         }
         else{
-            DB::table('categories')->where('id', $request->id)->update(['status'=>'inactive']);
-            
+            Category::where('id', $request->id)->update(['status'=>'inactive']);
+
             return response()->json(['msg'=> 'Catégorie désactivée avec succès', 'status'=>true]);
         }
     }

@@ -7,7 +7,6 @@ use App\Models\Category;
 use App\Models\Language;
 use App\Models\Publication;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class PublicationController extends Controller
@@ -25,13 +24,13 @@ class PublicationController extends Controller
 
     public function publicationStatus(Request $request){
         if($request->_this=='true'){
-            DB::table('publications')->where('id', $request->id)->update(['status'=>'active']);
-                    
+            Publication::where('id', $request->id)->update(['status'=>'active']);
+
             return response()->json(['msg'=> 'Publication activée avec succès', 'status'=>true]);
 
         }
         else{
-            DB::table('publications')->where('id', $request->id)->update(['status'=>'inactive']);
+            Publication::where('id', $request->id)->update(['status'=>'inactive']);
 
             return response()->json(['msg'=> 'Publication désactivée avec succès', 'status'=>true]);
         }
