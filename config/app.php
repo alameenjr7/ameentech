@@ -168,7 +168,6 @@ return [
          * Package Service Providers...
          */
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -194,7 +193,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // ...
-        'Image' => Intervention\Image\Facades\Image::class,
+        // 'Image' => Intervention\Image\Facades\Image::class, // Removed: intervention/image v3 has no built-in Laravel facade
 
 
     ])->toArray(),
