@@ -1,35 +1,33 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-    <title>{{get_setting('title')}} - Création site Web, Applications, Logiciels</title>
+    <title>{{get_setting('title')}} - Cr&eacute;ation site Web, Applications, Logiciels</title>
 @endsection
 
 @section('content')
 
 <!-- Start Main Banner Area -->
-
-{{-- @if (count($banners)>0) --}}
 <div class="main-banner-area">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-12">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
                 <div class="main-banner-content">
-                    <div class="tag wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+                    <div class="tag wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="800ms">
                         <img src="{{asset(get_setting('logo'))}}" alt="image">
-                        # AmeenTech Meilleure Entreprise Informatique.
+                        AmeenTech - Entreprise Informatique
                     </div>
 
                     <h6 style="margin-top: 25px;">Votre</h6>
                     <h1 class="wow fadeInLeft" style="margin-top: 4px;" data-wow-delay="00ms" data-wow-duration="1000ms"> </h1>
-                    <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">Assurer le meilleur retour sur investissement pour votre entreprise avec AmeenTECH.</p>
+                    <p class="wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1000ms">Assurer le meilleur retour sur investissement pour votre entreprise avec AmeenTECH. Nous transformons vos id&eacute;es en solutions digitales performantes.</p>
 
                     <div class="banner-btn">
-                        <a href="{{route('apropos')}}" class="default-btn wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">Voir Plus <i class="ri-arrow-right-line"></i><span></span></a>
+                        <a href="{{route('apropos')}}" class="default-btn wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">D&eacute;couvrir Plus <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-7 col-md-12">
+            <div class="col-lg-6 col-md-12">
                 <div class="main-banner-animation-image">
                     <img src="{{asset('frontend/assets/images/main-banner/banner-one/img1.png')}}" class="wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1000ms" alt="image" data-speed="0.06" data-revert="true">
                     <img src="{{asset('frontend/assets/images/main-banner/banner-one/img2.png')}}" class="wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1000ms" alt="image" data-speed="0.06" data-revert="true">
@@ -58,14 +56,7 @@
     <div class="main-banner-shape-2">
         <img src="{{asset('frontend/assets/images/main-banner/banner-one/shape-2.png')}}" alt="image">
     </div>
-    <div class="main-banner-shape-3">
-        <img src="{{asset('frontend/assets/images/main-banner/banner-one/shape-3.png')}}" alt="image">
-    </div>
-    <div class="main-banner-shape-4">
-        <img src="{{asset('frontend/assets/images/main-banner/banner-one/shape-4.png')}}" alt="image">
-    </div>
 </div>
-{{-- @endif --}}
 <!-- End Main Banner Area -->
 
 <!-- Start Partner Area -->
@@ -82,37 +73,25 @@
             </div>
         </div>
     </div>
-
-    <div class="partner-shape-1" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/partner/shape-1.png')}}" alt="image">
-    </div>
-    <div class="partner-shape-2" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/partner/shape-2.png')}}" alt="image">
-    </div>
 </div>
 @endif
 <!-- End Partner Area -->
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB5T3ZK"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
-    crossorigin="anonymous"></script>
-    <!-- AL AMEEN -->
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-3183523459637784"
-    data-ad-slot="6790306307"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<!-- End Google Tag Manager (noscript) -->
+
 <!-- Start Features Area -->
 @if (count($categories)>0)
 <div class="features-area pt-100 pb-70">
     <div class="container">
+        <div class="section-title">
+            <h2>Nos Domaines d'Expertise</h2>
+            <p>D&eacute;couvrez nos diff&eacute;rents domaines de comp&eacute;tences pour accompagner vos projets digitaux.</p>
+        </div>
+
         <div class="row justify-content-center">
             @foreach ($categories as $categorie)
             <div class="col-lg-4 col-md-6">
@@ -124,25 +103,12 @@
                     <p>{{$categorie->description}}</p>
 
                     <div class="features-btn">
-                        <a href="#" class="default-btn">Voir Plus <i class="ri-arrow-right-line"></i><span></span></a>
+                        <a href="#" class="default-btn">Voir Plus <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
-    </div>
-
-    <div class="features-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/features/shape-1.png')}}" alt="image">
-    </div>
-    <div class="features-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/features/shape-2.png')}}" alt="image">
-    </div>
-    <div class="features-shape-3">
-        <img src="{{asset('frontend/assets/images/features/shape-3.png')}}" alt="image">
-    </div>
-    <div class="features-shape-4">
-        <img src="{{asset('frontend/assets/images/features/shape-4.png')}}" alt="image">
     </div>
 </div>
 @endif
@@ -157,8 +123,8 @@
 <div class="services-area pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2>Services que nous Offrons!</h2>
-            <p>Best Strategic planning dolor sit amet consectetur adipiscing elit. Scelerisque amet odio velit auctor nam elit nulla eget sodales dui pulvina</p>
+            <h2>Services que nous Offrons</h2>
+            <p>Des solutions technologiques sur mesure pour propulser votre entreprise vers le succ&egrave;s digital.</p>
         </div>
 
         <div class="row justify-content-center">
@@ -169,27 +135,14 @@
                         <i class="{{$service->icon}}"></i>
                     </div>
                     <h3>
-                        <a href="services-details.html">{{$service->title}}</a>
+                        <a href="#">{{$service->title}}</a>
                     </h3>
                     <p>{!! html_entity_decode($service->description) !!}</p>
-                    <a href="services-details.html" class="services-btn">Voir Plus <i class="ri-arrow-right-line"></i></a>
+                    <a href="#" class="services-btn">Voir Plus <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
             @endforeach
         </div>
-    </div>
-
-    <div class="services-shape-1" data-speed="0.02" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-1.png')}}" alt="image">
-    </div>
-    <div class="services-shape-2" data-speed="0.02" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-2.png')}}" alt="image">
-    </div>
-    <div class="services-shape-3" data-speed="0.02" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-3.png')}}" alt="image">
-    </div>
-    <div class="services-shape-4" data-speed="0.02" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-4.png')}}" alt="image">
     </div>
 </div>
 @endif
@@ -204,8 +157,8 @@
 <div class="cases-area ptb-100">
     <div class="container">
         <div class="section-title">
-            <h2>Our Realizations / Recent Cases</h2>
-            <p>Best Strategic planning dolor sit amet consectetur adipiscing elit. Scelerisque amet odio velit auctor nam elit nulla eget sodales dui pulvina</p>
+            <h2>Nos R&eacute;alisations R&eacute;centes</h2>
+            <p>D&eacute;couvrez nos projets r&eacute;cents et les solutions d&eacute;velopp&eacute;es pour nos clients.</p>
         </div>
 
         <div class="row">
@@ -213,14 +166,14 @@
             <div class="col-lg-6">
                 <div class="single-cases">
                     <div class="cases-image">
-                        <a href="case-study-details.html">
+                        <a href="#">
                             <img src="{{asset($realisation->photo)}}" alt="image">
                         </a>
                     </div>
 
                     <div class="cases-content">
                         @if ($realisation->condition == 'terminer')
-                            <div class="tag-1">Terminer</div>
+                            <div class="tag-1">Termin&eacute;</div>
                         @else
                             <div class="tag-1">En Cours</div>
                         @endif
@@ -230,7 +183,7 @@
                         <div class="tag-2">{{$lang->title}}</div>
 
                         <h3>
-                            <a href="case-study-details.html">{{$realisation->title}}</a>
+                            <a href="#">{{$realisation->title}}</a>
                         </h3>
                         <p>{!! html_entity_decode($realisation->contenu) !!}</p>
                     </div>
@@ -239,31 +192,9 @@
             @endforeach
 
             <div class="cases-view-all-btn">
-                <a href="{{route('realisation')}}" class="default-btn">Voir toutes les Réalisations <i class="ri-briefcase-line"></i><span></span></a>
+                <a href="{{route('realisation')}}" class="default-btn">Voir toutes les R&eacute;alisations <i class="ri-briefcase-line"></i></a>
             </div>
         </div>
-    </div>
-
-    <div class="cases-shape-1" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-1.png')}}" alt="image">
-    </div>
-    <div class="cases-shape-2" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-2.png')}}" alt="image">
-    </div>
-    <div class="cases-shape-3" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-3.png')}}" alt="image">
-    </div>
-    <div class="cases-shape-4" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-4.png')}}" alt="image">
-    </div>
-    <div class="cases-shape-5" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-5.png')}}" alt="image">
-    </div>
-    <div class="cases-shape-6" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-4.png')}}" alt="image">
-    </div>
-    <div class="cases-shape-7" data-speed="0.04" data-revert="true">
-        <img src="{{asset('frontend/assets/images/cases-study/shape-5.png')}}" alt="image">
     </div>
 </div>
 @endif
@@ -273,203 +204,13 @@
 @include('frontend.layouts._client')
 <!-- End Clients Area -->
 
-<!-- Start Plans Area -->
-{{-- <div class="plans-area pt-100 pb-100">
-    <div class="container">
-        <div class="section-title">
-            <h2>Choose Your Best Plans</h2>
-            <p>Pay by monthly or yearly, you can cancel it anytime whatever you want</p>
-        </div>
-
-        <div class="plans-switcher">
-            <div class="switcher-box">
-                <label class="toggler toggler--is-active" id="filt-monthly">Bill Monthly</label>
-                <div class="toggle">
-                    <input type="checkbox" id="switcher" class="check">
-                    <b class="b switch"></b>
-                </div>
-                <label class="toggler" id="filt-yearly">Bill Yearly</label>
-            </div>
-        </div>
-
-        <div id="monthly" class="wrapper-full">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-plans-table">
-                        <div class="plans-header">
-                            <h3>Individual</h3>
-                            <p>Powerful & Awesome Elements</p>
-                        </div>
-
-                        <div class="price">$49 <span>/Month</span></div>
-
-                        <div class="plans-btn">
-                            <a href="#" class="default-btn">Purchase Now <i class="ri-arrow-right-line"></i><span></span></a>
-                        </div>
-
-                        <ul class="plans-features-list">
-                            <li><i class="ri-check-line"></i> Up to 10 Website</li>
-                            <li><i class="ri-check-line"></i> Lifetime Free Support</li>
-                            <li><i class="ri-check-line"></i> 10 GB Dedicated Hosting Free</li>
-                            <li><i class="ri-check-line"></i> 24/7 Hours Support</li>
-                            <li><i class="ri-check-line"></i> SEO Optimized</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-plans-table active-box">
-                        <div class="plans-header">
-                            <h3>Small Team</h3>
-                            <p>Powerful & Awesome Elements</p>
-                        </div>
-
-                        <div class="price">$69 <span>/Month</span></div>
-
-                        <div class="plans-btn">
-                            <a href="#" class="default-btn">Purchase Now <i class="ri-arrow-right-line"></i><span></span></a>
-                        </div>
-
-                        <ul class="plans-features-list">
-                            <li><i class="ri-check-line"></i> Up to 15 Website</li>
-                            <li><i class="ri-check-line"></i> Lifetime Free Support</li>
-                            <li><i class="ri-check-line"></i> 15 GB Dedicated Hosting Free</li>
-                            <li><i class="ri-check-line"></i> 24/7 Hours Support</li>
-                            <li><i class="ri-check-line"></i> SEO Optimized</li>
-                        </ul>
-
-                        <div class="popular-tag">
-                            <span>Most Popular</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-plans-table">
-                        <div class="plans-header">
-                            <h3>Business</h3>
-                            <p>Powerful & Awesome Elements</p>
-                        </div>
-
-                        <div class="price">$79 <span>/Month</span></div>
-
-                        <div class="plans-btn">
-                            <a href="#" class="default-btn">Purchase Now <i class="ri-arrow-right-line"></i><span></span></a>
-                        </div>
-
-                        <ul class="plans-features-list">
-                            <li><i class="ri-check-line"></i> Up to 20 Website</li>
-                            <li><i class="ri-check-line"></i> Lifetime Free Support</li>
-                            <li><i class="ri-check-line"></i> 20 GB Dedicated Hosting Free</li>
-                            <li><i class="ri-check-line"></i> 24/7 Hours Support</li>
-                            <li><i class="ri-check-line"></i> SEO Optimized</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="yearly" class="wrapper-full hide">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-plans-table">
-                        <div class="plans-header">
-                            <h3>Individual</h3>
-                            <p>Powerful & Awesome Elements</p>
-                        </div>
-
-                        <div class="price">$249 <span>/Yearly</span></div>
-
-                        <div class="plans-btn">
-                            <a href="#" class="default-btn">Purchase Now <i class="ri-arrow-right-line"></i><span></span></a>
-                        </div>
-
-                        <ul class="plans-features-list">
-                            <li><i class="ri-check-line"></i> Up to 10 Website</li>
-                            <li><i class="ri-check-line"></i> Lifetime Free Support</li>
-                            <li><i class="ri-check-line"></i> 10 GB Dedicated Hosting Free</li>
-                            <li><i class="ri-check-line"></i> 24/7 Hours Support</li>
-                            <li><i class="ri-check-line"></i> SEO Optimized</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-plans-table active-box">
-                        <div class="plans-header">
-                            <h3>Small Team</h3>
-                            <p>Powerful & Awesome Elements</p>
-                        </div>
-
-                        <div class="price">$269 <span>/Yearly</span></div>
-
-                        <div class="plans-btn">
-                            <a href="#" class="default-btn">Purchase Now <i class="ri-arrow-right-line"></i><span></span></a>
-                        </div>
-
-                        <ul class="plans-features-list">
-                            <li><i class="ri-check-line"></i> Up to 15 Website</li>
-                            <li><i class="ri-check-line"></i> Lifetime Free Support</li>
-                            <li><i class="ri-check-line"></i> 15 GB Dedicated Hosting Free</li>
-                            <li><i class="ri-check-line"></i> 24/7 Hours Support</li>
-                            <li><i class="ri-check-line"></i> SEO Optimized</li>
-                        </ul>
-
-                        <div class="popular-tag">
-                            <span>Most Popular</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-plans-table">
-                        <div class="plans-header">
-                            <h3>Business</h3>
-                            <p>Powerful & Awesome Elements</p>
-                        </div>
-
-                        <div class="price">$279 <span>/Yearly</span></div>
-
-                        <div class="plans-btn">
-                            <a href="#" class="default-btn">Purchase Now <i class="ri-arrow-right-line"></i><span></span></a>
-                        </div>
-
-                        <ul class="plans-features-list">
-                            <li><i class="ri-check-line"></i> Up to 20 Website</li>
-                            <li><i class="ri-check-line"></i> Lifetime Free Support</li>
-                            <li><i class="ri-check-line"></i> 20 GB Dedicated Hosting Free</li>
-                            <li><i class="ri-check-line"></i> 24/7 Hours Support</li>
-                            <li><i class="ri-check-line"></i> SEO Optimized</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="view-all-plans-btn">
-            <a href="pricing.html" class="plans-btn-one">See All Pricing Plan</a>
-        </div>
-    </div>
-
-    <div class="plans-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/plans/shape-1.png')}}" alt="image">
-    </div>
-    <div class="plans-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/plans/shape-2.png')}}" alt="image">
-    </div>
-    <div class="plans-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/plans/shape-3.png')}}" alt="image">
-    </div>
-</div> --}}
-<!-- End Plans Area -->
-<hr style="color: transparent;">
 <!-- Start Blog Area -->
 @if (count($bestPub)>0)
 <div class="blog-area pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2>Popular Blog Post</h2>
-            <p>We are try to Update with Latest Article and Blog Post Best Strategic Planning</p>
+            <h2>Nos Derni&egrave;res Publications</h2>
+            <p>Restez inform&eacute; avec nos derniers articles, tutoriels et actualit&eacute;s tech.</p>
         </div>
 
         <div class="row justify-content-center">
@@ -477,7 +218,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-details.html"><img src="{{asset($pub->photo)}}" alt="image"></a>
+                        <a href="{{route('publications.detail',$pub->slug)}}"><img src="{{asset($pub->photo)}}" alt="image"></a>
                     </div>
 
                     <div class="blog-content">
@@ -499,25 +240,19 @@
                             </li>
                         </ul>
                         <h3>
-                            <a href="blog-details.html">{{$pub->title}}</a>
+                            <a href="{{route('publications.detail',$pub->slug)}}">{{$pub->title}}</a>
                         </h3>
-                        <a href="blog-details.html" class="blog-btn">Voir Plus <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('publications.detail',$pub->slug)}}" class="blog-btn">Lire l'article <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-
-    <div class="blog-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/blog/shape-1.png')}}" alt="image">
-    </div>
-    <div class="blog-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/blog/shape-2.png')}}" alt="image">
-    </div>
 </div>
 @endif
 <!-- End Blog Area -->
+
 <!-- Start Overview Area -->
 <div class="overview-area pb-100">
     <div class="container">
@@ -526,27 +261,10 @@
                 <h3>Faisons quelque chose d'incroyable ensemble</h3>
 
                 <div class="overview-btn">
-                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer</a>
-                    <img src="{{asset('frontend/assets/images/overview/bar.png')}}" alt="image">
+                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer un Projet</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="overview-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-1.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-2.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-3.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-4.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-5" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-5.png')}}" alt="image">
     </div>
 </div>
 <!-- End Overview Area -->
@@ -555,41 +273,36 @@
 @section('scripts')
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script>
-
     var textAnim = document.querySelector('h1');
-
     var typewriter = new Typewriter(textAnim,{
-        // loop: true,
         deleteSpeed: 20
     });
 
     typewriter
     .changeDelay(20)
-    .typeString('Partenaire pour la création:')
+    .typeString('Partenaire pour la cr\u00e9ation:')
     .pauseFor(300)
     .pause(1000)
-    .typeString('<span style="color: #27ae60;"> Site Web</span> !')
+    .typeString('<span style="color: #10b981;"> Site Web</span> !')
     .pauseFor(1000)
     .deleteChars(10)
-    .typeString('<span style="color: #0064FB;"> Application web</span> !')
+    .typeString('<span style="color: #3b82f6;"> Application web</span> !')
     .pauseFor(1000)
     .deleteChars(5)
-    .typeString('<span style="color: midnightblue;"> mobile</span>!')
+    .typeString('<span style="color: #06b6d4;"> mobile</span>!')
     .pauseFor(1000)
     .deleteChars(21)
-    .typeString('<span style="color: #ea30ff;"> Logiciel</span> !')
+    .typeString('<span style="color: #8b5cf6;"> Logiciel</span> !')
     .pauseFor(1000)
     .deleteChars(10)
-    .typeString('<span style="color: #7f26c6;"> Base de Données</span> !')
+    .typeString('<span style="color: #a855f7;"> Base de Donn\u00e9es</span> !')
     .pauseFor(1000)
     .deleteChars(17)
-    .typeString('<span style="color: #dc3545;"> Logo</span> !')
+    .typeString('<span style="color: #ef4444;"> Logo</span> !')
     .pauseFor(1000)
     .deleteChars(6)
-    .typeString('<span style="color: #ff6910;"> Application métier</span> !')
+    .typeString('<span style="color: #f59e0b;"> Application m\u00e9tier</span> !')
     .pauseFor(1000)
-    // .deleteChars(20)
     .start()
 </script>
-
 @endsection
