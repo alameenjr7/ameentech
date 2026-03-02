@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/dark.css')}}">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+    <!-- Modern Redesign CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/redesign.css')}}">
 
     <link rel="icon" type="image/png" href="{{asset(get_setting('favicon'))}}">
 

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-    <title>Création Applications web/mobile - AmeenTECH</title>
+    <title>Nos Services - AmeenTECH</title>
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
 <div class="page-banner-area">
     <div class="container">
         <div class="page-banner-content">
-            <h2>Services</h2>
+            <h2>Nos Services</h2>
 
             <ul>
                 <li>
@@ -27,12 +27,6 @@
     <div class="page-banner-shape-2" data-speed="0.08" data-revert="true">
         <img src="{{asset('frontend/assets/images/page-banner/shape-2.png')}}" alt="image">
     </div>
-    <div class="page-banner-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/page-banner/shape-3.png')}}" alt="image">
-    </div>
-    <div class="page-banner-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/page-banner/shape-4.png')}}" alt="image">
-    </div>
 </div>
 <!-- End Page Banner Area -->
 
@@ -40,6 +34,11 @@
 @if (count($services)>0)
 <div class="services-area pt-100 pb-70">
     <div class="container">
+        <div class="section-title">
+            <h2>Ce Que Nous Faisons</h2>
+            <p>Des solutions technologiques adapt&eacute;es &agrave; vos besoins pour transformer votre vision en r&eacute;alit&eacute;.</p>
+        </div>
+
         <div class="row justify-content-center">
             @foreach ($services as $service)
             <div class="col-lg-4 col-md-6">
@@ -57,22 +56,6 @@
             @endforeach
         </div>
     </div>
-
-    <div class="services-shape-1" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-1.png')}}" alt="image">
-    </div>
-    <div class="services-shape-2" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-2.png')}}" alt="image">
-    </div>
-    <div class="services-shape-3" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-3.png')}}" alt="image">
-    </div>
-    <div class="services-shape-4" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-4.png')}}" alt="image">
-    </div>
-    <div class="services-shape-5" data-speed="0.06" data-revert="true">
-        <img src="{{asset('frontend/assets/images/services/shape-5.png')}}" alt="image">
-    </div>
 </div>
 @endif
 <!-- End Services Area -->
@@ -80,6 +63,11 @@
 <!-- Start Process Area -->
 <div class="process-area pb-100">
     <div class="container">
+        <div class="section-title">
+            <h2>Notre Processus</h2>
+            <p>Une approche m&eacute;thodique pour garantir des r&eacute;sultats optimaux.</p>
+        </div>
+
         <div class="process-inner-box">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
@@ -110,10 +98,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="process-bar-shape">
-                <img src="{{asset('frontend/assets/images/process-bar.png')}}" alt="image">
-            </div>
         </div>
     </div>
 </div>
@@ -126,7 +110,7 @@
 <!-- Start Clients Area -->
 @include('frontend.layouts._client')
 <!-- End Clients Area -->
-<hr style="color: transparent;">
+
 <!-- Start Overview Area -->
 <div class="overview-area pb-100">
     <div class="container">
@@ -135,41 +119,12 @@
                 <h3>Faisons quelque chose d'incroyable ensemble</h3>
 
                 <div class="overview-btn">
-                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer</a>
-                    <img src="{{asset('frontend/assets/images/overview/bar.png')}}" alt="image">
+                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer un Projet</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="overview-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-1.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-2.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-3.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-4.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-5" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-5.png')}}" alt="image">
-    </div>
 </div>
 <!-- End Overview Area -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
-    crossorigin="anonymous"></script>
-    <!-- AL AMEEN -->
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-3183523459637784"
-    data-ad-slot="6790306307"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 @endsection

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-    <title>Aide à la création de site web, application - AmeenTECH</title>
+    <title>A Propos - AmeenTECH</title>
 @endsection
 
 @section('content')
@@ -27,12 +27,6 @@
     <div class="page-banner-shape-2" data-speed="0.08" data-revert="true">
         <img src="{{asset('frontend/assets/images/page-banner/shape-2.png')}}" alt="image">
     </div>
-    <div class="page-banner-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/page-banner/shape-3.png')}}" alt="image">
-    </div>
-    <div class="page-banner-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/page-banner/shape-4.png')}}" alt="image">
-    </div>
 </div>
 <!-- End Page Banner Area -->
 
@@ -40,6 +34,11 @@
 @if (count($abouts)>0)
 <div class="features-area pt-100 pb-70">
     <div class="container">
+        <div class="section-title">
+            <h2>Ce Qui Nous D&eacute;finit</h2>
+            <p>D&eacute;couvrez les valeurs et les comp&eacute;tences qui font d'AmeenTech votre partenaire digital id&eacute;al.</p>
+        </div>
+
         <div class="row justify-content-center">
             @foreach ($abouts as $about)
             <div class="col-lg-4 col-md-6">
@@ -51,35 +50,17 @@
                     <p>{{$about->description}}</p>
 
                     <div class="features-btn">
-                        <a href="#" class="default-btn">Lire Plus <i class="ri-arrow-right-line"></i><span></span></a>
+                        <a href="#" class="default-btn">Lire Plus <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-
-    <div class="features-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/features/shape-1.png')}}" alt="image">
-    </div>
-    <div class="features-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/features/shape-2.png')}}" alt="image">
-    </div>
 </div>
 @endif
 <!-- End Features Area -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3183523459637784"
-    crossorigin="anonymous"></script>
-    <!-- AL AMEEN -->
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-3183523459637784"
-    data-ad-slot="6790306307"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <!-- Start About Area -->
 @include('frontend.layouts._experience')
 <!-- End About Area -->
@@ -103,7 +84,7 @@
                             <span class="odometer" data-count="{{$reas}}">00</span>
                             <span class="sign-icon">+</span>
                         </h3>
-                        <p>Total Réalisations</p>
+                        <p>Total R&eacute;alisations</p>
                     </div>
                 </div>
 
@@ -116,7 +97,7 @@
                             <span class="odometer" data-count="{{$rea_act}}">00</span>
                             <span class="sign-icon">+</span>
                         </h3>
-                        <p>Réalisations résolues</p>
+                        <p>R&eacute;alisations r&eacute;solues</p>
                     </div>
                 </div>
 
@@ -129,7 +110,7 @@
                             <span class="odometer" data-count="{{$rea_win}}">00</span>
                             <span class="sign-icon">+</span>
                         </h3>
-                        <p>Récompenses gagnantes</p>
+                        <p>R&eacute;compenses</p>
                     </div>
                 </div>
 
@@ -148,19 +129,6 @@
             </div>
         </div>
     </div>
-
-    <div class="fun-facts-shape-1" data-speed="0.09" data-revert="true">
-        <img src="{{asset('frontend/assets/images/fun-facts/shape-1.png')}}" alt="image">
-    </div>
-    <div class="fun-facts-shape-2" data-speed="0.05" data-revert="true">
-        <img src="{{asset('frontend/assets/images/fun-facts/shape-2.png')}}" alt="image">
-    </div>
-    <div class="fun-facts-shape-3" data-speed="0.09" data-revert="true">
-        <img src="{{asset('frontend/assets/images/fun-facts/shape-3.png')}}" alt="image">
-    </div>
-    <div class="fun-facts-shape-4" data-speed="0.05" data-revert="true">
-        <img src="{{asset('frontend/assets/images/fun-facts/shape-4.png')}}" alt="image">
-    </div>
 </div>
 <!-- End Fun Facts Area -->
 
@@ -168,49 +136,44 @@
 @include('frontend.layouts._support')
 <!-- End Support Area -->
 
-<!-- Start Team Area -->
+<!-- Start Questions Area -->
 <div class="contact-area ptb-100">
     <div class="container">
         <div class="contact-form">
             <div class="section-title">
-                <h3>Posez vos Questions!</h3>
-                <p>Si vous avez des questions sur le Développement, n'hésitez pas à les poser.</p>
+                <h3>Posez vos Questions</h3>
+                <p>Si vous avez des questions sur le D&eacute;veloppement, n'h&eacute;sitez pas &agrave; les poser.</p>
             </div>
-            <form id="" action="{{route('submit.question')}}" method="POST">
+            <form action="{{route('submit.question')}}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="full_name" required value="{{old('full_name')}}" id="full_name" class="form-control" data-error="S'il vous plaît entrez votre nom" placeholder="Nom Complet*">
-                            <div class="help-block with-errors"></div>
+                            <input type="text" name="full_name" required value="{{old('full_name')}}" id="full_name" class="form-control" placeholder="Nom Complet *">
                         </div>
                     </div>
 
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
-                            <input type="email" name="email" required value="{{old('email')}}" id="email" class="form-control" data-error="Veuillez saisir votre e-mail" placeholder="Email*">
-                            <div class="help-block with-errors"></div>
+                            <input type="email" name="email" required value="{{old('email')}}" id="email" class="form-control" placeholder="Email *">
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
-                            <textarea name="question" class="form-control" id="message" cols="30" rows="5" required data-error="Rédigez votre message" placeholder="Question ?">{{old('question')}}</textarea>
-                            <div class="help-block with-errors"></div>
+                            <textarea name="question" class="form-control" id="message" cols="30" rows="5" required placeholder="Votre Question ?">{{old('question')}}</textarea>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
-                        <button type="submit" class="default-btn">Posez <i class="ri-arrow-right-line"></i><span></span></button>
-                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                        <div class="clearfix"></div>
+                        <button type="submit" class="default-btn">Envoyer <i class="ri-arrow-right-line"></i></button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<!-- End Team Area -->
+<!-- End Questions Area -->
 
 <!-- Start Clients Area -->
 @include('frontend.layouts._client')
@@ -221,8 +184,8 @@
 <div class="faq-area ptb-100">
     <div class="container">
         <div class="section-title">
-            <h2>Questions fréquemment posées</h2>
-            <p>Voici une liste de réponses aux questions les plus posées!</p>
+            <h2>Questions Fr&eacute;quemment Pos&eacute;es</h2>
+            <p>Voici une liste de r&eacute;ponses aux questions les plus pos&eacute;es.</p>
         </div>
 
         <div class="row align-items-center">
@@ -264,27 +227,10 @@
                 <h3>Faisons quelque chose d'incroyable ensemble</h3>
 
                 <div class="overview-btn">
-                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer</a>
-                    <img src="{{asset('frontend/assets/images/overview/bar.png')}}" alt="image">
+                    <a href="{{route('contact')}}" class="overview-btn-one">Commencer un Projet</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="overview-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-1.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-2.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-3.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-4.png')}}" alt="image">
-    </div>
-    <div class="overview-shape-5" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/overview/shape-5.png')}}" alt="image">
     </div>
 </div>
 <!-- End Overview Area -->

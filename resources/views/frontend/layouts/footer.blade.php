@@ -7,8 +7,8 @@
                 <div class="single-footer-widget">
                     <div class="widget-logo">
                         <a href="{{route('accueil')}}">
-                            <img src="{{asset(get_setting('logo2'))}}" class="black-logo" alt="logo">
-                            <img src="{{asset(get_setting('logo2'))}}" class="white-logo" alt="logo">
+                            <img src="{{asset(get_setting('logo2'))}}" class="black-logo" alt="AmeenTech">
+                            <img src="{{asset(get_setting('logo2'))}}" class="white-logo" alt="AmeenTech">
                         </a>
                     </div>
                     <p>{{get_setting('footer')}}</p>
@@ -18,12 +18,10 @@
                             <i class="ri-customer-service-line"></i>
                             <a href="tel:{{get_setting('telephone1')}}">{{get_setting('telephone1')}}</a>
                         </li>
-
                         <li>
                             <i class="ri-global-line"></i>
-                            <a href="mailto:{{get_setting('email_1')}}"><span class="__cf_email__" data-cfemail="cda5a8a1a1a2e3a0a88dbda1a2a9e3aea2a0">{{get_setting('email_1')}}</span></a>
+                            <a href="mailto:{{get_setting('email_1')}}">{{get_setting('email_1')}}</a>
                         </li>
-
                         <li>
                             <i class="ri-map-pin-line"></i>
                             {{get_setting('adresse')}}, {{get_setting('lot')}}, {{get_setting('appartement')}}
@@ -34,16 +32,15 @@
 
             <div class="col-lg-2 col-sm-3">
                 <div class="single-footer-widget">
-                    <h3>Lien Rapide</h3>
+                    <h3>Liens Rapides</h3>
 
                     <ul class="footer-links-list">
                         <li><a href="{{route('accueil')}}">Accueil</a></li>
                         <li><a href="{{route('service')}}">Services</a></li>
-                        <li><a href="{{route('contact')}}">Contacts</a></li>
+                        <li><a href="{{route('contact')}}">Contact</a></li>
                         <li><a href="{{route('publication')}}">Publications</a></li>
-                        <li><a href="{{route('realisation')}}">Réalisations</a></li>
+                        <li><a href="{{route('realisation')}}">R&eacute;alisations</a></li>
                         <li><a href="{{route('apropos')}}">A Propos</a></li>
-                        {{-- <li><a href="privacy-policy.html">Privacy Policy</a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -56,45 +53,40 @@
             @endphp
             <div class="col-lg-2 col-sm-6">
                 <div class="single-footer-widget">
-                    <h3>Posts Récents</h3>
+                    <h3>Posts R&eacute;cents</h3>
                     @if (count($lastPublication)>0)
                         <div class="blog-details-desc">
                             <div class="article-comments">
                                 @foreach ($lastPublication as $post)
                                     <div class="comments-list" style="padding-left: 60px;">
-                                        <img src="{{asset($post->photo)}}" alt="image" style="border-radius: 30%; width:50px;">
-                                        <h6 ><a href="{{route('publications.detail',$post->slug)}}">{{$post->title}}</a></h6>
-                                        <span >{{$post->getCreatedAt()}}</span>
+                                        <img src="{{asset($post->photo)}}" alt="image" style="border-radius: 8px; width:50px;">
+                                        <h6><a href="{{route('publications.detail',$post->slug)}}">{{$post->title}}</a></h6>
+                                        <span>{{$post->getCreatedAt()}}</span>
                                     </div>
                                 @endforeach
                             </div>
                         </div>
                     @else
-                        <p class="text-left">Pas de Pubs</p>
+                        <p class="text-left">Aucune publication</p>
                     @endif
                 </div>
             </div>
-            
 
             <div class="col-lg-2 col-sm-6">
                 <div class="single-footer-widget">
-                    <h3>Services</h3>
+                    <h3>Informations</h3>
 
                     <ul class="footer-links-list">
-                        <li><a href="#">Programme d’affiliation</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                        <li><a href="#">Conditions Générales</a></li>
-                        {{-- <li><a href="contact.html">Support</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="services-details.html">Cloud Computing</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li> --}}
+                        <li><a href="#">Programme d'affiliation</a></li>
+                        <li><a href="#">Politique de confidentialit&eacute;</a></li>
+                        <li><a href="#">Conditions G&eacute;n&eacute;rales</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget">
-                    <h3>ABONNES-TOI !</h3>
+                    <h3>Newsletter</h3>
 
                     <div class="widget-newsletter">
                         <div class="newsletter-content">
@@ -103,8 +95,7 @@
 
                         <form class="newsletter-form" data-bs-toggle="validator" action="{{route('mail.contact')}}" method="POST">
                             @csrf
-                            <input type="email" class="input-newsletter" placeholder="Entrer votre email" name="email" value="{{old('email')}}" required autocomplete="off">
-
+                            <input type="email" class="input-newsletter" placeholder="Votre adresse email" name="email" value="{{old('email')}}" required autocomplete="off">
                             <button type="submit"><i class="ri-send-plane-2-line"></i></button>
                             <div id="validator-newsletter" class="form-result"></div>
                         </form>
@@ -146,27 +137,11 @@
         <div class="container">
             <div class="copyright-area-content">
                 <p>
-                    Copyright © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> AmeenTECH. Tous droits réservés par
+                    Copyright &copy; <script>document.write(new Date().getFullYear())</script> AmeenTECH. Tous droits r&eacute;serv&eacute;s par
                     <a href="https://ameenaltech.com/" target="_blank">{{get_setting('title')}}</a>
                 </p>
             </div>
         </div>
-    </div>
-
-    <div class="footer-shape-1" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/footer/shape-1.png')}}" alt="image">
-    </div>
-    <div class="footer-shape-2" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/footer/shape-2.png')}}" alt="image">
-    </div>
-    <div class="footer-shape-3" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/footer/shape-3.png')}}" alt="image">
-    </div>
-    <div class="footer-shape-4" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/footer/shape-4.png')}}" alt="image">
-    </div>
-    <div class="footer-shape-5" data-speed="0.08" data-revert="true">
-        <img src="{{asset('frontend/assets/images/footer/shape-5.png')}}" alt="image">
     </div>
 </footer>
 <!-- End Footer Area -->
