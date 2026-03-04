@@ -128,7 +128,7 @@
         </div>
 
         <div class="row justify-content-center">
-            @foreach ($services as $servie)
+            @foreach ($services as $service)
             <div class="col-lg-4 col-md-6">
                 <div class="single-services">
                     <div class="icon">

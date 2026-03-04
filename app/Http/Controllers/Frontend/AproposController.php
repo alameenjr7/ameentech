@@ -15,7 +15,7 @@ class AproposController extends Controller
     {
         $abouts = About::where('status','active')->orderBy('id','DESC')->limit(3)->get();
         $clients = Client::where('status','active')->orderBy('id','DESC')->get();
-        $questions = Question::where('status','active')->where('response', '<>', '', 'and')->orderBy('id','DESC')->limit('6')->get();
+        $questions = Question::where('status','active')->where('response', '<>', '')->orderBy('id','DESC')->limit(6)->get();
         
         return view('frontend.abouts.index',compact(
             'abouts',

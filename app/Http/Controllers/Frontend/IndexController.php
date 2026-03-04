@@ -23,7 +23,7 @@ class IndexController extends Controller
         $categories = Category::where(['status'=>'active','is_parent'=>1])->orderBy('id','DESC')->get();
         $languages = Language::where(['status'=>'active'])->orderBy('id','DESC')->get();
         $services = Service::where('status','active')->orderBy('id','DESC')->limit(3)->get();
-        $realisations = Realisation::where(['status'=>'active','condition'=>'terminer','condition'=>'en_cours'])->orderBy('id','DESC')->limit(2)->get();
+        $realisations = Realisation::where('status','active')->whereIn('condition',['terminer','en_cours'])->orderBy('id','DESC')->limit(2)->get();
         $clients = Client::where('status','active')->orderBy('id','DESC')->get();
         $items = DB::table('publication_reviews')
             ->select('publication_id',DB::raw('COUNT(publication_id) as count'))
